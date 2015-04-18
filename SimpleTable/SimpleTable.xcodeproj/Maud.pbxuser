@@ -1,0 +1,105 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* SimpleTableAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 426}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 497}";
+		};
+	};
+	1D3623250D0F684500981E51 /* SimpleTableAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {726, 476}}";
+			sepNavSelRange = "{393, 0}";
+			sepNavVisRange = "{0, 731}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* SimpleTable */ = {
+		activeExec = 0;
+		executables = (
+			DD0B8B590FC0250500F23D23 /* SimpleTable */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* SimpleTableViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {618, 426}}";
+			sepNavSelRange = "{327, 8}";
+			sepNavVisRange = "{0, 346}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* SimpleTableViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {678, 1344}}";
+			sepNavSelRange = "{2714, 0}";
+			sepNavVisRange = "{1554, 1164}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = DD0B8B590FC0250500F23D23 /* SimpleTable */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* SimpleTable */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* SimpleTable */,
+		);
+		codeSenseManager = DD0B8B630FC0252400F23D23 /* Code sense */;
+		executables = (
+			DD0B8B590FC0250500F23D23 /* SimpleTable */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 264250629;
+			PBXWorkspaceStateSaveDate = 264250629;
+		};
+		sourceControlManager = DD0B8B620FC0252400F23D23 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	DD0B8B590FC0250500F23D23 /* SimpleTable */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = SimpleTable;
+		sourceDirectories = (
+		);
+	};
+	DD0B8B620FC0252400F23D23 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	DD0B8B630FC0252400F23D23 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	DD0B8B6E0FC026A700F23D23 /* NextViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 426}}";
+			sepNavSelRange = "{271, 17}";
+			sepNavVisRange = "{0, 311}";
+		};
+	};
+	DD0B8B6F0FC026A700F23D23 /* NextViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {612, 826}}";
+			sepNavSelRange = "{1336, 46}";
+			sepNavVisRange = "{649, 764}";
+		};
+	};
+}

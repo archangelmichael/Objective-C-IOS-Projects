@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1E46F2A3-AEA0-4C9E-A77A-56B5F53CE6FC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BunnyClasses</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>47559F72A47264873F61A6CE653BEB2B4FB96821</key>
+		<string>https://github.com/archangelmichael/Objective-C-IOS-Projects</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BunnyClasses/BunnyClasses.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>47559F72A47264873F61A6CE653BEB2B4FB96821</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/archangelmichael/Objective-C-IOS-Projects</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>47559F72A47264873F61A6CE653BEB2B4FB96821</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>47559F72A47264873F61A6CE653BEB2B4FB96821</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Objective-C-IOS-Projects</string>
+		</dict>
+	</array>
+</dict>
+</plist>

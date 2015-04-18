@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crystalball" translatesAutoresizingMaskIntoConstraints="NO" id="2Un-db-cr3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crystalball" translatesAutoresizingMaskIntoConstraints="NO" id="Acm-QE-IDf">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
@@ -76,16 +79,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Acm-QE-IDf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="55B-of-0xN"/>
+                            <constraint firstItem="2Un-db-cr3" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="Duq-H2-7U6"/>
                             <constraint firstItem="Bea-jx-mE9" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="153" id="GIb-cn-vX3"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hB6-gd-hio" secondAttribute="bottom" constant="20" id="JCf-wr-r2B"/>
                             <constraint firstAttribute="trailing" secondItem="Acm-QE-IDf" secondAttribute="trailing" id="MCi-cq-GN3"/>
                             <constraint firstItem="Bea-jx-mE9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="14" id="TTj-Ke-tmA"/>
                             <constraint firstItem="Bea-jx-mE9" firstAttribute="trailing" secondItem="hB6-gd-hio" secondAttribute="trailing" id="WZj-GJ-4gv"/>
                             <constraint firstItem="Acm-QE-IDf" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="X96-Wt-yx3"/>
+                            <constraint firstItem="2Un-db-cr3" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="YBi-UO-awE"/>
                             <constraint firstItem="Bea-jx-mE9" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="75" id="ZqB-qS-PRA"/>
                             <constraint firstItem="Acm-QE-IDf" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Zv4-Ac-ePq"/>
+                            <constraint firstItem="Bea-jx-mE9" firstAttribute="centerX" secondItem="2Un-db-cr3" secondAttribute="centerX" id="cwF-vF-wgU"/>
+                            <constraint firstItem="hB6-gd-hio" firstAttribute="leading" secondItem="Bea-jx-mE9" secondAttribute="leading" id="d3B-LT-iKq"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hB6-gd-hio" secondAttribute="bottom" constant="8" symbolic="YES" id="hnN-2R-NGa"/>
+                            <constraint firstItem="2Un-db-cr3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="sUF-G1-nTh"/>
                             <constraint firstItem="Acm-QE-IDf" firstAttribute="centerX" secondItem="hB6-gd-hio" secondAttribute="centerX" id="uCZ-WL-9Jb"/>
+                            <constraint firstAttribute="trailing" secondItem="2Un-db-cr3" secondAttribute="trailing" id="x7P-0f-RSe"/>
                             <constraint firstItem="hB6-gd-hio" firstAttribute="leading" secondItem="Bea-jx-mE9" secondAttribute="leading" id="yz5-gr-U8K"/>
                         </constraints>
                         <variation key="default">
