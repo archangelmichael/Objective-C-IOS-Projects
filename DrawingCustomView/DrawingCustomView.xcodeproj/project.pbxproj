@@ -14,6 +14,7 @@
 		199A42351AE3F64800BBDF7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199A42341AE3F64800BBDF7D /* Images.xcassets */; };
 		199A42381AE3F64800BBDF7D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199A42361AE3F64800BBDF7D /* LaunchScreen.xib */; };
 		199A42441AE3F64800BBDF7D /* DrawingCustomViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A42431AE3F64800BBDF7D /* DrawingCustomViewTests.m */; };
+		199A42501AE3F66300BBDF7D /* DrawingCustomUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A424F1AE3F66300BBDF7D /* DrawingCustomUIView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		199A423D1AE3F64800BBDF7D /* DrawingCustomViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingCustomViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		199A42421AE3F64800BBDF7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		199A42431AE3F64800BBDF7D /* DrawingCustomViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingCustomViewTests.m; sourceTree = "<group>"; };
+		199A424E1AE3F66300BBDF7D /* DrawingCustomUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingCustomUIView.h; sourceTree = "<group>"; };
+		199A424F1AE3F66300BBDF7D /* DrawingCustomUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingCustomUIView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		199A42261AE3F64800BBDF7D /* DrawingCustomView */ = {
 			isa = PBXGroup;
 			children = (
+				199A424D1AE3F64C00BBDF7D /* Views */,
 				199A422B1AE3F64800BBDF7D /* AppDelegate.h */,
 				199A422C1AE3F64800BBDF7D /* AppDelegate.m */,
 				199A422E1AE3F64800BBDF7D /* ViewController.h */,
@@ -117,6 +121,15 @@
 				199A42421AE3F64800BBDF7D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		199A424D1AE3F64C00BBDF7D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				199A424E1AE3F66300BBDF7D /* DrawingCustomUIView.h */,
+				199A424F1AE3F66300BBDF7D /* DrawingCustomUIView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199A42501AE3F66300BBDF7D /* DrawingCustomUIView.m in Sources */,
 				199A42301AE3F64800BBDF7D /* ViewController.m in Sources */,
 				199A422D1AE3F64800BBDF7D /* AppDelegate.m in Sources */,
 				199A422A1AE3F64800BBDF7D /* main.m in Sources */,

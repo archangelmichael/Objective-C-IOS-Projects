@@ -10,4 +10,8 @@
 
 @interface CustomTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *cellLabel;
+
+- (IBAction)butttonClick:(id)sender;
+
 @end

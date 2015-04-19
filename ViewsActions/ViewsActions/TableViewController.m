@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "CustomTableViewCell.h"
 
 @interface TableViewController ()
 
@@ -14,8 +15,17 @@
 
 @implementation TableViewController
 
+static NSInteger cellsCount = 1000;
+static NSString *cellId = @"CustomUITableViewCell";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Load CustomTableViewCell into the table
+    UINib *nib = [UINib nibWithNibName:cellId bundle:nil];
+    [self.tableView registerNib:nib
+         forCellReuseIdentifier:cellId];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,26 +42,30 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return cellsCount;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    CustomTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellId
+                                                                     forIndexPath:indexPath];
     // Configure the cell...
+    cell.cellLabel.text = [NSString stringWithFormat:@"Item #%li",(long)indexPath.row ];
+    
+#warning Every 5th is red Every 7th is Green, but we must reset color before that
+    cell.backgroundColor = [UIColor clearColor];
+    if (indexPath.row % 5 == 0) {
+        cell.backgroundColor = [UIColor redColor];
+    }
+    else if (indexPath.row % 7 == 0) {
+        cell.backgroundColor = [UIColor greenColor];
+    }
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

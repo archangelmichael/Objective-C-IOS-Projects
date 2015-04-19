@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		199A41731AE3D5C100BBDF7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A41721AE3D5C100BBDF7D /* main.m */; };
 		199A41761AE3D5C100BBDF7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A41751AE3D5C100BBDF7D /* AppDelegate.m */; };
-		199A41791AE3D5C100BBDF7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A41781AE3D5C100BBDF7D /* ViewController.m */; };
 		199A417C1AE3D5C100BBDF7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199A417A1AE3D5C100BBDF7D /* Main.storyboard */; };
 		199A417E1AE3D5C100BBDF7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199A417D1AE3D5C100BBDF7D /* Images.xcassets */; };
 		199A41811AE3D5C100BBDF7D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199A417F1AE3D5C100BBDF7D /* LaunchScreen.xib */; };
 		199A418D1AE3D5C100BBDF7D /* SeguesActionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A418C1AE3D5C100BBDF7D /* SeguesActionsTests.m */; };
+		199A41991AE3D64500BBDF7D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A41981AE3D64500BBDF7D /* FirstViewController.m */; };
+		199A419C1AE3D65200BBDF7D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A419B1AE3D65200BBDF7D /* SecondViewController.m */; };
+		199A419F1AE3D65D00BBDF7D /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A419E1AE3D65D00BBDF7D /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		199A41721AE3D5C100BBDF7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		199A41741AE3D5C100BBDF7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		199A41751AE3D5C100BBDF7D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		199A41771AE3D5C100BBDF7D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		199A41781AE3D5C100BBDF7D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		199A417B1AE3D5C100BBDF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		199A417D1AE3D5C100BBDF7D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		199A41801AE3D5C100BBDF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		199A41861AE3D5C100BBDF7D /* SeguesActionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeguesActionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		199A418B1AE3D5C100BBDF7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		199A418C1AE3D5C100BBDF7D /* SeguesActionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeguesActionsTests.m; sourceTree = "<group>"; };
+		199A41971AE3D64500BBDF7D /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		199A41981AE3D64500BBDF7D /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		199A419A1AE3D65200BBDF7D /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		199A419B1AE3D65200BBDF7D /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		199A419D1AE3D65D00BBDF7D /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		199A419E1AE3D65D00BBDF7D /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +87,9 @@
 		199A416F1AE3D5C100BBDF7D /* SeguesActions */ = {
 			isa = PBXGroup;
 			children = (
+				199A41961AE3D61D00BBDF7D /* Controllers */,
 				199A41741AE3D5C100BBDF7D /* AppDelegate.h */,
 				199A41751AE3D5C100BBDF7D /* AppDelegate.m */,
-				199A41771AE3D5C100BBDF7D /* ViewController.h */,
-				199A41781AE3D5C100BBDF7D /* ViewController.m */,
 				199A417A1AE3D5C100BBDF7D /* Main.storyboard */,
 				199A417D1AE3D5C100BBDF7D /* Images.xcassets */,
 				199A417F1AE3D5C100BBDF7D /* LaunchScreen.xib */,
@@ -117,6 +122,19 @@
 				199A418B1AE3D5C100BBDF7D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		199A41961AE3D61D00BBDF7D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				199A41971AE3D64500BBDF7D /* FirstViewController.h */,
+				199A41981AE3D64500BBDF7D /* FirstViewController.m */,
+				199A419A1AE3D65200BBDF7D /* SecondViewController.h */,
+				199A419B1AE3D65200BBDF7D /* SecondViewController.m */,
+				199A419D1AE3D65D00BBDF7D /* ThirdViewController.h */,
+				199A419E1AE3D65D00BBDF7D /* ThirdViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				199A41791AE3D5C100BBDF7D /* ViewController.m in Sources */,
+				199A419C1AE3D65200BBDF7D /* SecondViewController.m in Sources */,
+				199A419F1AE3D65D00BBDF7D /* ThirdViewController.m in Sources */,
 				199A41761AE3D5C100BBDF7D /* AppDelegate.m in Sources */,
+				199A41991AE3D64500BBDF7D /* FirstViewController.m in Sources */,
 				199A41731AE3D5C100BBDF7D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

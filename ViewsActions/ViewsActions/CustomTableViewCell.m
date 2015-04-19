@@ -20,4 +20,7 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)butttonClick:(id)sender {
+    int x = 5;
+}
 @end

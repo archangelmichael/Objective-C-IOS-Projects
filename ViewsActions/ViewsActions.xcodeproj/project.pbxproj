@@ -14,6 +14,11 @@
 		199A41BA1AE3DAA600BBDF7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199A41B91AE3DAA600BBDF7D /* Images.xcassets */; };
 		199A41BD1AE3DAA600BBDF7D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199A41BB1AE3DAA600BBDF7D /* LaunchScreen.xib */; };
 		199A41C91AE3DAA600BBDF7D /* ViewsActionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A41C81AE3DAA600BBDF7D /* ViewsActionsTests.m */; };
+		199A41D41AE3DAC700BBDF7D /* Custom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199A41D31AE3DAC700BBDF7D /* Custom.xib */; };
+		199A41D91AE3E25E00BBDF7D /* CustomUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A41D81AE3E25E00BBDF7D /* CustomUIView.m */; };
+		199A41DB1AE3E69100BBDF7D /* CustomUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199A41DA1AE3E69100BBDF7D /* CustomUITableViewCell.xib */; };
+		199A41DE1AE3E6D500BBDF7D /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A41DD1AE3E6D500BBDF7D /* CustomTableViewCell.m */; };
+		199A41E21AE3E8E600BBDF7D /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A41E11AE3E8E600BBDF7D /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,14 @@
 		199A41C21AE3DAA600BBDF7D /* ViewsActionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewsActionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		199A41C71AE3DAA600BBDF7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		199A41C81AE3DAA600BBDF7D /* ViewsActionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewsActionsTests.m; sourceTree = "<group>"; };
+		199A41D31AE3DAC700BBDF7D /* Custom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Custom.xib; sourceTree = "<group>"; };
+		199A41D71AE3E25E00BBDF7D /* CustomUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUIView.h; sourceTree = "<group>"; };
+		199A41D81AE3E25E00BBDF7D /* CustomUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUIView.m; sourceTree = "<group>"; };
+		199A41DA1AE3E69100BBDF7D /* CustomUITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomUITableViewCell.xib; sourceTree = "<group>"; };
+		199A41DC1AE3E6D500BBDF7D /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		199A41DD1AE3E6D500BBDF7D /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		199A41E01AE3E8E600BBDF7D /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		199A41E11AE3E8E600BBDF7D /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +94,8 @@
 		199A41AB1AE3DAA600BBDF7D /* ViewsActions */ = {
 			isa = PBXGroup;
 			children = (
+				199A41DF1AE3E8D100BBDF7D /* ViewControllers */,
+				199A41D21AE3DAAA00BBDF7D /* Views */,
 				199A41B01AE3DAA600BBDF7D /* AppDelegate.h */,
 				199A41B11AE3DAA600BBDF7D /* AppDelegate.m */,
 				199A41B31AE3DAA600BBDF7D /* ViewController.h */,
@@ -117,6 +132,28 @@
 				199A41C71AE3DAA600BBDF7D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		199A41D21AE3DAAA00BBDF7D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				199A41D31AE3DAC700BBDF7D /* Custom.xib */,
+				199A41D71AE3E25E00BBDF7D /* CustomUIView.h */,
+				199A41D81AE3E25E00BBDF7D /* CustomUIView.m */,
+				199A41DA1AE3E69100BBDF7D /* CustomUITableViewCell.xib */,
+				199A41DC1AE3E6D500BBDF7D /* CustomTableViewCell.h */,
+				199A41DD1AE3E6D500BBDF7D /* CustomTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		199A41DF1AE3E8D100BBDF7D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				199A41E01AE3E8E600BBDF7D /* TableViewController.h */,
+				199A41E11AE3E8E600BBDF7D /* TableViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +238,9 @@
 			files = (
 				199A41B81AE3DAA600BBDF7D /* Main.storyboard in Resources */,
 				199A41BD1AE3DAA600BBDF7D /* LaunchScreen.xib in Resources */,
+				199A41D41AE3DAC700BBDF7D /* Custom.xib in Resources */,
 				199A41BA1AE3DAA600BBDF7D /* Images.xcassets in Resources */,
+				199A41DB1AE3E69100BBDF7D /* CustomUITableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +259,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				199A41B51AE3DAA600BBDF7D /* ViewController.m in Sources */,
+				199A41E21AE3E8E600BBDF7D /* TableViewController.m in Sources */,
+				199A41D91AE3E25E00BBDF7D /* CustomUIView.m in Sources */,
 				199A41B21AE3DAA600BBDF7D /* AppDelegate.m in Sources */,
+				199A41DE1AE3E6D500BBDF7D /* CustomTableViewCell.m in Sources */,
 				199A41AF1AE3DAA600BBDF7D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface RegistrationUIView : UIView
+@property (weak, nonatomic) IBOutlet UITextField *nameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *detailsLabel;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @end

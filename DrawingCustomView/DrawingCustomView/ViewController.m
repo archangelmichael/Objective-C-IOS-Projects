@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DrawingCustomUIView.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    CGRect rect = CGRectMake(50, 50, 200, 100);
+    UIView *subview = [[DrawingCustomUIView alloc] initWithFrame:rect];
+    subview.backgroundColor = [UIColor greenColor];
+    
+    [self.view addSubview:subview];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
