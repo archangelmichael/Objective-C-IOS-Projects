@@ -29,8 +29,15 @@ const int rowsCount = 1000;
                                                                 owner:self
                                                               options:nil]
                                    objectAtIndex:0];
+    
     // Set source for table view in CustomUIView
     [customUiView.tableView setDataSource:self];
+    
+    // Set background gradient for customUiView
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = customUiView.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor greenColor] CGColor], (id)[[UIColor redColor] CGColor], nil];
+    [customUiView.layer insertSublayer:gradient atIndex:0];
     
     [self.view addSubview:customUiView];
     

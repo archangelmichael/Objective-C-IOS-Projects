@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Ww-3C-UIu">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--SQLite3 Use-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="k1H-4e-j96">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="idCellRecord" textLabel="pwH-gU-bsO" detailTextLabel="IKU-AB-KtJ" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="5j4-AZ-Xlo">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5j4-AZ-Xlo" id="fc5-lv-57W">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pwH-gU-bsO">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IKU-AB-KtJ">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SQLite3 Use" id="dIN-Wb-U6s">
+                        <barButtonItem key="backBarButtonItem" title="Go Back" id="Un5-7i-hC1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IAR-P0-k4p">
+                            <color key="tintColor" red="0.82249691611842102" green="0.087710731907894732" blue="0.55173211348684215" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addNewRecord:" destination="vXZ-lx-hvc" id="FWz-cW-h3c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tablePeople" destination="k1H-4e-j96" id="Vu3-d7-D3h"/>
+                        <segue destination="MYp-cc-fO5" kind="show" identifier="idSegueEditInfo" id="mDc-IK-2tZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853.5" y="347.5"/>
+        </scene>
+        <!--Edit Info-->
+        <scene sceneID="bWc-pC-6fO">
+            <objects>
+                <viewController id="MYp-cc-fO5" customClass="EditInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XEa-WT-RNw"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Hs-Mx-eVU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TXG-ra-YRc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type first name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Onc-UA-BfN">
+                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.34046330520000001" green="0.97502367420000002" blue="0.41428323439999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.82249691609999998" green="0.087710731910000006" blue="0.55173211349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type last name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oMC-Pl-Ucb">
+                                <rect key="frame" x="16" y="110" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.34046330520000001" green="0.97502367420000002" blue="0.41428323439999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.82249691609999998" green="0.087710731910000006" blue="0.55173211349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type age..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3OD-zs-c0G">
+                                <rect key="frame" x="16" y="148" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.34046330520000001" green="0.97502367420000002" blue="0.41428323439999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.82249691609999998" green="0.087710731910000006" blue="0.55173211349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Onc-UA-BfN" firstAttribute="trailing" secondItem="TXG-ra-YRc" secondAttribute="trailingMargin" id="Go4-6b-7QQ"/>
+                            <constraint firstItem="oMC-Pl-Ucb" firstAttribute="trailing" secondItem="Onc-UA-BfN" secondAttribute="trailing" id="JQ0-qy-qoB"/>
+                            <constraint firstItem="Onc-UA-BfN" firstAttribute="top" secondItem="XEa-WT-RNw" secondAttribute="bottom" constant="8" symbolic="YES" id="O8Y-ug-wcs"/>
+                            <constraint firstItem="3OD-zs-c0G" firstAttribute="trailing" secondItem="oMC-Pl-Ucb" secondAttribute="trailing" id="Ucb-bU-qQH"/>
+                            <constraint firstItem="3OD-zs-c0G" firstAttribute="top" secondItem="oMC-Pl-Ucb" secondAttribute="bottom" constant="8" symbolic="YES" id="Uu8-HK-maM"/>
+                            <constraint firstItem="Onc-UA-BfN" firstAttribute="leading" secondItem="TXG-ra-YRc" secondAttribute="leadingMargin" id="WYE-SO-cee"/>
+                            <constraint firstItem="oMC-Pl-Ucb" firstAttribute="leading" secondItem="3OD-zs-c0G" secondAttribute="leading" id="f1D-CK-z84"/>
+                            <constraint firstItem="Onc-UA-BfN" firstAttribute="leading" secondItem="oMC-Pl-Ucb" secondAttribute="leading" id="hdJ-Ze-zV8"/>
+                            <constraint firstItem="oMC-Pl-Ucb" firstAttribute="top" secondItem="Onc-UA-BfN" secondAttribute="bottom" constant="8" symbolic="YES" id="tzF-Lf-lCp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Info" id="coO-eE-egq">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="x9y-z1-mi0">
+                            <color key="tintColor" red="0.82249691609999998" green="0.087710731910000006" blue="0.55173211349999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveInfo:" destination="MYp-cc-fO5" id="MOt-Be-lCU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="textAge" destination="3OD-zs-c0G" id="Atx-PU-3SB"/>
+                        <outlet property="textFirstname" destination="Onc-UA-BfN" id="C82-oB-JS9"/>
+                        <outlet property="textLastname" destination="oMC-Pl-Ucb" id="cB7-iU-Ad4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yr3-qD-A7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357.5" y="347.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2wJ-Wp-dj1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Ww-3C-UIu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Dh-rS-ecD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="pQJ-Fn-t2t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Db6-HC-sDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="348"/>
+        </scene>
+    </scenes>
+</document>
