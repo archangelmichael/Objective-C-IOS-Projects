@@ -94,8 +94,8 @@
 
 -(void)loadImages {
     images = [NSMutableArray new];
-    for ( int i = 0 ; i < 6; i++ ) {
-        NSString *imagePath = [NSString stringWithFormat:@"dot_onboarding%d.jpg", i + 1];
+    for ( int i = 0 ; i < 5; i++ ) {
+        NSString *imagePath = [NSString stringWithFormat:@"img%d.png", i + 1];
         [images addObject:imagePath];
     }
 }
