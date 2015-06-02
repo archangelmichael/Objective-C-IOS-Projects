@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>4618C0B6-0D44-49EF-8E1E-45EBA81B59E2</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>CrystalBall</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>47559F72A47264873F61A6CE653BEB2B4FB96821</key>
 		<string>https://github.com/archangelmichael/Objective-C-IOS-Projects</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CrystalBall/CrystalBall.xcodeproj/project.xcworkspace</string>
+	<string>CrystalBall/CrystalBall.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>47559F72A47264873F61A6CE653BEB2B4FB96821</key>

@@ -20,6 +20,20 @@
 }
 
 - (IBAction)tryYourLuck:(id)sender {
+    self.luckLabel.text = [LuckGenerator getrandomPrediction];
+}
+
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    self.luckLabel.text = nil;
+}
+
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake) {
+        self.luckLabel.text = [LuckGenerator getrandomPrediction];
+    }
+}
+
+-(void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     
 }
 

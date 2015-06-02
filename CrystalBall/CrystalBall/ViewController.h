@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LuckGenerator.h"
 
 @interface ViewController : UIViewController
 
