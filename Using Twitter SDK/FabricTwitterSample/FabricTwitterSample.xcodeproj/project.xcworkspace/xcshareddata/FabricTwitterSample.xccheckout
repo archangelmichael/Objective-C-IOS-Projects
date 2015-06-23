@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>20F02C2C-31A3-459A-A5EA-233BBAD65EC5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>FabricTwitterSample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>47559F72A47264873F61A6CE653BEB2B4FB96821</key>
 		<string>https://github.com/archangelmichael/Objective-C-IOS-Projects</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Using Twitter SDK/FabricTwitterSample/FabricTwitterSample.xcodeproj/project.xcworkspace</string>
+	<string>Using Twitter SDK/FabricTwitterSample/FabricTwitterSample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>47559F72A47264873F61A6CE653BEB2B4FB96821</key>

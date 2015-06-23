@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>0153E55F-9DEA-414F-A7D6-2D880658F346</string>
+	<string>0CB9EB57-E35C-42A1-A6B6-C3C22E0F5FFC</string>
 	<key>IDESourceControlProjectName</key>
-	<string>TwitterAppSample</string>
+	<string>CoreDataAdvanced</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>47559F72A47264873F61A6CE653BEB2B4FB96821</key>
 		<string>https://github.com/archangelmichael/Objective-C-IOS-Projects</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Using Twitter SDK/TwitterAppSample/TwitterAppSample.xcodeproj</string>
+	<string>Core Data Actions/CoreDataAdvanced/CoreDataAdvanced.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>47559F72A47264873F61A6CE653BEB2B4FB96821</key>
