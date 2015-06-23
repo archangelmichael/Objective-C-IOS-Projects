@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>22099DD2-0254-43C2-8D34-803FFB3B6307</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>UserDefaultsActions</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>47559F72A47264873F61A6CE653BEB2B4FB96821</key>
 		<string>https://github.com/archangelmichael/Objective-C-IOS-Projects</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>UserDefaultsActions/UserDefaultsActions.xcodeproj/project.xcworkspace</string>
+	<string>UserDefaultsActions/UserDefaultsActions.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>47559F72A47264873F61A6CE653BEB2B4FB96821</key>
