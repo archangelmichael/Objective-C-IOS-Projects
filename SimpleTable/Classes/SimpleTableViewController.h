@@ -7,16 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Device.h"
 
-@interface SimpleTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
-	IBOutlet UITableView *tblSimpleTable;
-	NSMutableArray *arryData;
+@interface SimpleTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+	NSMutableArray *dataArr;
 }
 
-- (IBAction)AddButtonAction:(id)sender;
-- (IBAction)DeleteButtonAction:(id)sender;
+@property (retain, nonatomic) IBOutlet UITableView *devicesTable;
 
-- (IBAction) EditTable:(id)sender;
+- (IBAction)addButtonAction:(id)sender;
+- (IBAction)deleteButtonAction:(id)sender;
+
+- (IBAction)editTable:(id)sender;
 
 @end
 

@@ -9,7 +9,75 @@
 #import "NextViewController.h"
 
 
-@implementation NextViewController
+@implementation NextViewController {
+    BOOL isInEditMode;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    isInEditMode = NO;
+    self.editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit"
+                                                                   style:UIBarButtonItemStyleDone
+                                                                  target:self
+                                                                  action:@selector(onEditButtonClick:)];
+    [self.navigationItem setRightBarButtonItem:self.editButton];
+
+    
+    self.devTitle.delegate = self;
+    self.devYear.delegate = self;
+    self.devManufacturer.delegate = self;
+    
+    [self setTextFieldsEnabledTo:NO];
+    
+    if (self.selectedDevice != nil) {
+        self.devTitle.text = self.selectedDevice.title;
+        self.devYear.text = [NSString stringWithFormat:@"%i", self.selectedDevice.year];
+        self.devManufacturer.text = self.selectedDevice.manufacturer;
+    }
+    
+    self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                 action:@selector(onTapScreen:)];
+    self.tapRecognizer.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:self.tapRecognizer];
+    
+}
+
+- (IBAction)onEditButtonClick:(id)sender {
+    if (isInEditMode) {
+        [self onSaveChanges:nil];
+        [self.editButton setTitle:@"Edit"];
+        [self setTextFieldsEnabledTo:NO];
+    }
+    else {
+        [self.editButton setTitle:@"Save Changes"];
+        [self setTextFieldsEnabledTo:YES];
+    }
+    
+    isInEditMode = !isInEditMode;
+}
+
+- (IBAction)onSaveChanges:(id)sender {
+    self.selectedDevice.title = self.devTitle.text;
+    self.selectedDevice.year = [self.devYear.text intValue];
+    self.selectedDevice.manufacturer = self.devManufacturer.text;
+}
+
+-(void)setTextFieldsEnabledTo:(BOOL)areEnabled {
+    [self.devTitle setEnabled:areEnabled];
+    [self.devYear setEnabled:areEnabled];
+    [self.devManufacturer setEnabled:areEnabled];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (IBAction)onTapScreen:(UITapGestureRecognizer *)recognizer {
+    [self.devTitle resignFirstResponder];
+    [self.devYear resignFirstResponder];
+    [self.devManufacturer resignFirstResponder];
+}
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -28,13 +96,6 @@
 */
 
 /*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
-
-/*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
@@ -45,14 +106,5 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
     // Release anything that's not essential, such as cached data
-}
-
-
-- (void)dealloc {
-    [super dealloc];
-}
-
-- (IBAction) changeProductText:(NSString *)str{
-	lblProductTxt.text = str;
 }
 @end

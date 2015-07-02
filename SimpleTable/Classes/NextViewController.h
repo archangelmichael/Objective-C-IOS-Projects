@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Device.h"
 
+@interface NextViewController : UIViewController <UITextFieldDelegate>
 
-@interface NextViewController : UIViewController {
-	IBOutlet UILabel *lblProductTxt;
-}
+@property (nonatomic, strong) Device * selectedDevice;
 
-- (IBAction) changeProductText:(NSString *)str;
+@property (nonatomic, strong) IBOutlet UITapGestureRecognizer *tapRecognizer;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem * editButton;
+
+@property (retain, nonatomic) IBOutlet UITextField *devTitle;
+
+@property (retain, nonatomic) IBOutlet UITextField *devYear;
+
+@property (retain, nonatomic) IBOutlet UITextField *devManufacturer;
 @end

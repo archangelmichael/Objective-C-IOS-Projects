@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1974345C1B451573001F42C4 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 1974345B1B451573001F42C4 /* Device.m */; };
 		199A41631AE2DD2600BBDF7D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 199A41621AE2DD2600BBDF7D /* Default-568h@2x.png */; };
 		1D3623260D0F684500981E51 /* SimpleTableAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* SimpleTableAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1974345A1B451573001F42C4 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		1974345B1B451573001F42C4 /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
 		199A41621AE2DD2600BBDF7D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* SimpleTableAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableAppDelegate.h; sourceTree = "<group>"; };
@@ -59,12 +62,30 @@
 			children = (
 				1D3623240D0F684500981E51 /* SimpleTableAppDelegate.h */,
 				1D3623250D0F684500981E51 /* SimpleTableAppDelegate.m */,
+				1974345E1B451D33001F42C4 /* ViewControllers */,
+				1974345D1B451D2B001F42C4 /* Models */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1974345D1B451D2B001F42C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1974345A1B451573001F42C4 /* Device.h */,
+				1974345B1B451573001F42C4 /* Device.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1974345E1B451D33001F42C4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				28D7ACF60DDB3853001CB0EB /* SimpleTableViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* SimpleTableViewController.m */,
 				DD0B8B6E0FC026A700F23D23 /* NextViewController.h */,
 				DD0B8B6F0FC026A700F23D23 /* NextViewController.m */,
 			);
-			path = Classes;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -84,7 +105,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				DD0B8B740FC0276800F23D23 /* NextView.xib */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -101,6 +121,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DD0B8B740FC0276800F23D23 /* NextView.xib */,
 				2899E5210DE3E06400AC0155 /* SimpleTableViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -184,6 +205,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* SimpleTableAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* SimpleTableViewController.m in Sources */,
+				1974345C1B451573001F42C4 /* Device.m in Sources */,
 				DD0B8B700FC026A700F23D23 /* NextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +246,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
@@ -237,6 +260,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
