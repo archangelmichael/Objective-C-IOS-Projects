@@ -16,6 +16,7 @@
 		199A41991AE3D64500BBDF7D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A41981AE3D64500BBDF7D /* FirstViewController.m */; };
 		199A419C1AE3D65200BBDF7D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A419B1AE3D65200BBDF7D /* SecondViewController.m */; };
 		199A419F1AE3D65D00BBDF7D /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A419E1AE3D65D00BBDF7D /* ThirdViewController.m */; };
+		19EBAC0E1B457A1F00977F09 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19EBAC0D1B457A1F00977F09 /* FourthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		199A419B1AE3D65200BBDF7D /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		199A419D1AE3D65D00BBDF7D /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		199A419E1AE3D65D00BBDF7D /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		19EBAC0C1B457A1F00977F09 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		19EBAC0D1B457A1F00977F09 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				199A419B1AE3D65200BBDF7D /* SecondViewController.m */,
 				199A419D1AE3D65D00BBDF7D /* ThirdViewController.h */,
 				199A419E1AE3D65D00BBDF7D /* ThirdViewController.m */,
+				19EBAC0C1B457A1F00977F09 /* FourthViewController.h */,
+				19EBAC0D1B457A1F00977F09 /* FourthViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19EBAC0E1B457A1F00977F09 /* FourthViewController.m in Sources */,
 				199A419C1AE3D65200BBDF7D /* SecondViewController.m in Sources */,
 				199A419F1AE3D65D00BBDF7D /* ThirdViewController.m in Sources */,
 				199A41761AE3D5C100BBDF7D /* AppDelegate.m in Sources */,
@@ -436,6 +442,7 @@
 				199A41921AE3D5C100BBDF7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		199A41931AE3D5C100BBDF7D /* Build configuration list for PBXNativeTarget "SeguesActionsTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +451,7 @@
 				199A41951AE3D5C100BBDF7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
