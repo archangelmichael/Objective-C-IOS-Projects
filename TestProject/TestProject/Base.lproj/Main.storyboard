@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eHD-jF-U6N">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Table View Controller-->
+        <scene sceneID="gql-lV-VCv">
+            <objects>
+                <tableViewController id="5Sm-aw-UPu" customClass="MainTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="QEX-EU-bHR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TestTaskCellId" textLabel="cCh-k8-0fE" detailTextLabel="AYA-cH-xVn" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="MM3-Kv-czm">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MM3-Kv-czm" id="4Om-NN-bSv">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cCh-k8-0fE">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AYA-cH-xVn">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5Sm-aw-UPu" id="Seq-oo-Fbm"/>
+                            <outlet property="delegate" destination="5Sm-aw-UPu" id="SMO-aR-v7W"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="bcn-Zy-OD7"/>
+                    <connections>
+                        <segue destination="tuF-UP-AsK" kind="show" identifier="goToVCPopup" id="pCR-YE-l4p"/>
+                        <segue destination="GOy-C8-hlY" kind="show" identifier="goToVCEmpty" id="D0l-LB-pBp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ng0-gI-PKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="123"/>
+        </scene>
+        <!--POPUPS-->
+        <scene sceneID="D21-mx-NFn">
+            <objects>
+                <viewController id="tuF-UP-AsK" customClass="PopupsVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NnP-db-1jR"/>
+                        <viewControllerLayoutGuide type="bottom" id="2wa-DI-f03"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="23V-b1-jb2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fR-7k-xRh">
+                                <rect key="frame" x="65" y="72" width="191" height="36"/>
+                                <color key="backgroundColor" red="0.0076869623410000002" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show SKTipAlertView">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onShowSKTipAlertViewPopover:" destination="tuF-UP-AsK" eventType="touchUpInside" id="GTE-f9-aIX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f31-XE-gal">
+                                <rect key="frame" x="83" y="116" width="154" height="36"/>
+                                <color key="backgroundColor" red="0.0076869623410000002" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show FPPopover">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onShowFPPopover:" destination="tuF-UP-AsK" eventType="touchUpInside" id="qRv-yv-dmf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KR-uZ-N6D">
+                                <rect key="frame" x="65" y="160" width="192" height="36"/>
+                                <color key="backgroundColor" red="0.0076869623410000002" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show CMPopTipView">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onShowCMPopup:" destination="tuF-UP-AsK" eventType="touchUpInside" id="z4H-Ms-Y42"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CK-pq-xKK">
+                                <rect key="frame" x="66" y="204" width="191" height="36"/>
+                                <color key="backgroundColor" red="0.0076869623410000002" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show Native Popover">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onShowPopover:" destination="tuF-UP-AsK" eventType="touchUpInside" id="qda-gP-IaZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.018503752124739536" green="1" blue="0.8286901548573774" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1CK-pq-xKK" firstAttribute="top" secondItem="2KR-uZ-N6D" secondAttribute="bottom" constant="8" id="8hg-JL-hnm"/>
+                            <constraint firstAttribute="centerX" secondItem="f31-XE-gal" secondAttribute="centerX" id="Ary-4Q-0cj"/>
+                            <constraint firstAttribute="centerX" secondItem="2fR-7k-xRh" secondAttribute="centerX" constant="-0.5" id="Cbn-u6-7sT"/>
+                            <constraint firstItem="2wa-DI-f03" firstAttribute="top" secondItem="1CK-pq-xKK" secondAttribute="bottom" constant="20" id="bg2-hL-Bgh"/>
+                            <constraint firstAttribute="centerX" secondItem="1CK-pq-xKK" secondAttribute="centerX" constant="-1.5" id="cID-Nq-zQA"/>
+                            <constraint firstItem="f31-XE-gal" firstAttribute="top" secondItem="2fR-7k-xRh" secondAttribute="bottom" constant="8" id="d1B-Yr-BrT"/>
+                            <constraint firstItem="2fR-7k-xRh" firstAttribute="top" secondItem="NnP-db-1jR" secondAttribute="bottom" constant="8" id="jyz-2x-P1v"/>
+                            <constraint firstItem="1CK-pq-xKK" firstAttribute="leading" secondItem="23V-b1-jb2" secondAttribute="leadingMargin" id="lnH-oO-OuE"/>
+                            <constraint firstAttribute="centerX" secondItem="2KR-uZ-N6D" secondAttribute="centerX" constant="-1" id="n7N-oJ-qM8"/>
+                            <constraint firstItem="2KR-uZ-N6D" firstAttribute="top" secondItem="f31-XE-gal" secondAttribute="bottom" constant="8" id="yHR-70-L3u"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lnH-oO-OuE"/>
+                                <exclude reference="bg2-hL-Bgh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="POPUPS" id="Qeq-l3-Mir">
+                        <barButtonItem key="rightBarButtonItem" title="Action" id="sWo-eX-e98">
+                            <connections>
+                                <action selector="onNavBarPopup:" destination="tuF-UP-AsK" id="wrD-Hp-G13"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="popoverButton" destination="1CK-pq-xKK" id="fBv-FF-Z9v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qep-FA-gIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1R6-gc-Rbo">
+            <objects>
+                <viewController id="GOy-C8-hlY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XLD-jG-jjg"/>
+                        <viewControllerLayoutGuide type="bottom" id="lSH-gq-Xd4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ik3-6e-NAd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4QW-on-hMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-452" y="689"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zpv-RQ-LRS">
+            <objects>
+                <navigationController id="eHD-jF-U6N" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AAl-Po-hUn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5Sm-aw-UPu" kind="relationship" relationship="rootViewController" id="beV-ro-Psj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w7F-U0-jYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-452" y="123"/>
+        </scene>
+    </scenes>
+</document>

@@ -44,7 +44,6 @@ NSString * const CELL_INDENTIFIER = @"TodoCell";
     [self.navigationItem setLeftBarButtonItem:editButton];
     */
     
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -66,6 +65,7 @@ NSString * const CELL_INDENTIFIER = @"TodoCell";
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1; // Return the number of sections.
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //    int count = (int)todos.count;
@@ -103,6 +103,16 @@ NSString * const CELL_INDENTIFIER = @"TodoCell";
     cell.textLabel.text = currentTodo.title;
     cell.detailTextLabel.text = currentTodo.details;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    
+    
+    UIView *separatorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 8)];
+    separatorView.layer.borderColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tab-bar-gradient"]].CGColor;
+    separatorView.layer.borderWidth = 4.0;
+    [cell.contentView addSubview:separatorView];
+    
+    
+    
     return cell;
 }
 
