@@ -53,31 +53,61 @@ id sharedTipAlertView = nil;
     return self;
 }
 
--(void)showRedNotificationForString:(NSString*)content forDuration:(float)duration andPosition:(SKTipAlertViewPosition)position permanent:(BOOL)permanent{
-    CGSize viewSize = [SKAlertView alertViewSizeForText:content andWidth:0];
-    SKAlertView *view = [[SKAlertView alloc] initWithFrame:CGRectMake(0, 0, viewSize.width, viewSize.height)];
-    [view setbackgroundImage:[[UIImage imageNamed:@"SK-bgRed"] resizableImageWithCapInsets:UIEdgeInsetsMake(16, 16, 16, 16)]];
+-(void)showRedNotificationForString:(NSString*)content
+                        forDuration:(float)duration
+                        andPosition:(SKTipAlertViewPosition)position
+                          permanent:(BOOL)permanent{
+    CGSize viewSize = [SKAlertView alertViewSizeForText:content
+                                               andWidth:0];
+    SKAlertView *view = [[SKAlertView alloc] initWithFrame:CGRectMake(0, 0,
+                                                                      viewSize.width, viewSize.height)];
+    [view setbackgroundImage:[[UIImage imageNamed:@"SK-bgRed"]
+                              resizableImageWithCapInsets:UIEdgeInsetsMake(16, 16, 16, 16)]];
     [view setText:content];
-    [self showNotificationForView:view forDuration:duration andPosition:position permanent:permanent];
+    [self showNotificationForView:view
+                      forDuration:duration
+                      andPosition:position
+                        permanent:permanent];
 }
 
--(void)showBlueNotificationForString:(NSString*)content forDuration:(float)duration andPosition:(SKTipAlertViewPosition)position permanent:(BOOL)permanent{
-    CGSize viewSize = [SKAlertView alertViewSizeForText:content andWidth:0];
-    SKAlertView *view = [[SKAlertView alloc] initWithFrame:CGRectMake(0, 0, viewSize.width, viewSize.height)];
-    [view setbackgroundImage:[[UIImage imageNamed:@"SK-bgBlue"] resizableImageWithCapInsets:UIEdgeInsetsMake(16, 16, 16, 16)]];
+-(void)showBlueNotificationForString:(NSString*)content
+                         forDuration:(float)duration
+                         andPosition:(SKTipAlertViewPosition)position
+                           permanent:(BOOL)permanent{
+    CGSize viewSize = [SKAlertView alertViewSizeForText:content
+                                               andWidth:0];
+    SKAlertView *view = [[SKAlertView alloc] initWithFrame:CGRectMake(0, 0,
+                                                                      viewSize.width, viewSize.height)];
+    [view setbackgroundImage:[[UIImage imageNamed:@"SK-bgBlue"]
+                              resizableImageWithCapInsets:UIEdgeInsetsMake(16, 16, 16, 16)]];
     [view setText:content];
-    [self showNotificationForView:view forDuration:duration andPosition:position permanent:permanent];
+    [self showNotificationForView:view
+                      forDuration:duration
+                      andPosition:position
+                        permanent:permanent];
 }
 
--(void)showGreenNotificationForString:(NSString*)content forDuration:(float)duration andPosition:(SKTipAlertViewPosition)position permanent:(BOOL)permanent{
-    CGSize viewSize = [SKAlertView alertViewSizeForText:content andWidth:0];
-    SKAlertView *view = [[SKAlertView alloc] initWithFrame:CGRectMake(0, 0, viewSize.width, viewSize.height)];
-    [view setbackgroundImage:[[UIImage imageNamed:@"SK-bgGreen"] resizableImageWithCapInsets:UIEdgeInsetsMake(16, 16, 16, 16)]];
+-(void)showGreenNotificationForString:(NSString*)content
+                          forDuration:(float)duration
+                          andPosition:(SKTipAlertViewPosition)position
+                            permanent:(BOOL)permanent{
+    CGSize viewSize = [SKAlertView alertViewSizeForText:content
+                                               andWidth:0];
+    SKAlertView *view = [[SKAlertView alloc] initWithFrame:CGRectMake(0, 0,
+                                                                      viewSize.width, viewSize.height)];
+    [view setbackgroundImage:[[UIImage imageNamed:@"SK-bgGreen"]
+                              resizableImageWithCapInsets:UIEdgeInsetsMake(16, 16, 16, 16)]];
     [view setText:content];
-    [self showNotificationForView:view forDuration:duration andPosition:position permanent:permanent];
+    [self showNotificationForView:view
+                      forDuration:duration
+                      andPosition:position
+                        permanent:permanent];
 }
 
--(void)showNotificationForView:(UIView*)view forDuration:(float)duration andPosition:(SKTipAlertViewPosition)position permanent:(BOOL)permanent{
+-(void)showNotificationForView:(UIView*)view
+                   forDuration:(float)duration
+                   andPosition:(SKTipAlertViewPosition)position
+                     permanent:(BOOL)permanent{
     if (![view isKindOfClass:[UIView class]]) {
         NSLog(@"notification has to be instance of UIView");
         return;
@@ -98,22 +128,26 @@ id sharedTipAlertView = nil;
     NSString *positionString;
     if (position == SKTipAlertViewPositionBottom) {
         positionString = @"bottom";
-        [view setFrame:CGRectMake((w-view.frame.size.width)/2, h, view.frame.size.width, view.frame.size.height)];
+        [view setFrame:CGRectMake((w-view.frame.size.width)/2, h,
+                                  view.frame.size.width, view.frame.size.height)];
     } else {
         positionString = @"top";
-        [view setFrame:CGRectMake((w-view.frame.size.width)/2, y-view.frame.size.height, view.frame.size.width, view.frame.size.height)];
+        [view setFrame:CGRectMake((w-view.frame.size.width)/2, y-view.frame.size.height,
+                                  view.frame.size.width, view.frame.size.height)];
     }
     
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:view,@"view",positionString,@"position", nil];
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:view, @"view", positionString, @"position", nil];
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
     
     if (position == SKTipAlertViewPositionBottom) {
-        [view setFrame:CGRectMake((w-view.frame.size.width)/2, h-view.frame.size.height, view.frame.size.width, view.frame.size.height)];
+        [view setFrame:CGRectMake((w-view.frame.size.width)/2, h-view.frame.size.height,
+                                  view.frame.size.width, view.frame.size.height)];
     } else {
-        [view setFrame:CGRectMake((w-view.frame.size.width)/2, y, view.frame.size.width, view.frame.size.height)];
+        [view setFrame:CGRectMake((w-view.frame.size.width)/2, y, view.frame.size.width,
+                                  view.frame.size.height)];
     }
     
     [UIView commitAnimations];
@@ -153,7 +187,9 @@ id sharedTipAlertView = nil;
     }
 }
 
--(void)hideView:(UIView*)view andPosition:(SKTipAlertViewPosition)position{
+-(void)hideView:(UIView*)view
+    andPosition:(SKTipAlertViewPosition)position{
+    
     UIWindow *window = [[UIApplication sharedApplication] keyWindow];
     float w = window.frame.size.width;
     float h = window.frame.size.height;

@@ -34,8 +34,23 @@ typedef enum {
 @interface SKTipAlertView : NSObject
 
 + (id)sharedTipAlertView;
--(void)showRedNotificationForString:(NSString*)content forDuration:(float)duration andPosition:(SKTipAlertViewPosition)position permanent:(BOOL)permanent;
--(void)showBlueNotificationForString:(NSString*)content forDuration:(float)duration andPosition:(SKTipAlertViewPosition)position permanent:(BOOL)permanent;
--(void)showGreenNotificationForString:(NSString*)content forDuration:(float)duration andPosition:(SKTipAlertViewPosition)position permanent:(BOOL)permanent;
--(void)showNotificationForView:(UIView*)view forDuration:(float)duration andPosition:(SKTipAlertViewPosition)position permanent:(BOOL)permanent;
+-(void)showRedNotificationForString:(NSString*)content
+                        forDuration:(float)duration
+                        andPosition:(SKTipAlertViewPosition)position
+                          permanent:(BOOL)permanent;
+
+-(void)showBlueNotificationForString:(NSString*)content
+                         forDuration:(float)duration
+                         andPosition:(SKTipAlertViewPosition)position
+                           permanent:(BOOL)permanent;
+
+-(void)showGreenNotificationForString:(NSString*)content
+                          forDuration:(float)duration
+                          andPosition:(SKTipAlertViewPosition)position
+                            permanent:(BOOL)permanent;
+
+-(void)showNotificationForView:(UIView*)view
+                   forDuration:(float)duration
+                   andPosition:(SKTipAlertViewPosition)position
+                     permanent:(BOOL)permanent;
 @end

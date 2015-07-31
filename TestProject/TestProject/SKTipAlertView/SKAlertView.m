@@ -24,6 +24,10 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        // Custom additions
+        self.layer.cornerRadius = 10;
+        self.clipsToBounds = YES;
+        
         self.backgroundImageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         [_backgroundImageview setBackgroundColor:[UIColor clearColor]];
         [self addSubview:_backgroundImageview];
@@ -31,7 +35,7 @@
         [_contentLabel setBackgroundColor:[UIColor clearColor]];
         [_contentLabel setTextAlignment:NSTextAlignmentCenter];
         [_contentLabel setTextColor:[UIColor whiteColor]];
-        [_contentLabel setFont:[UIFont systemFontOfSize:12]];
+        [_contentLabel setFont:[UIFont systemFontOfSize:18]];
         [_contentLabel setLineBreakMode:NSLineBreakByWordWrapping];
         [_contentLabel setNumberOfLines:0];
         [self addSubview:_contentLabel];
@@ -51,8 +55,11 @@
     if (w == 0) {
         w = SK_ALERT_VIEW_DEFAULT_WIDTH;
     }
-    CGSize retsize = [text sizeWithFont:[UIFont systemFontOfSize:14.0] constrainedToSize:CGSizeMake(w, SK_ALERT_VIEW_MAX_HEIGHT) lineBreakMode:NSLineBreakByWordWrapping];
-    return CGSizeMake(retsize.width+SK_LR_PADDING*2, retsize.height+SK_TB_PADDING*2);
+    
+    CGSize retsize = [text sizeWithFont:[UIFont systemFontOfSize:18.0]
+                      constrainedToSize:CGSizeMake(w, SK_ALERT_VIEW_MAX_HEIGHT)
+                          lineBreakMode:NSLineBreakByWordWrapping];
+    return CGSizeMake(retsize.width + SK_LR_PADDING * 2, retsize.height + SK_TB_PADDING * 2);
 }
 
 @end

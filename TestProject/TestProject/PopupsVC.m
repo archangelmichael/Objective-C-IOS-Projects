@@ -14,6 +14,7 @@
 
 // Custom Library SKTipAlertView
 #import "SKTipAlertView.h"
+#import "CustomPopView.h"
 
 // Custom Libraty FPPopover
 #import "FPPopoverController.h"
@@ -27,9 +28,10 @@
 
 @interface PopupsVC () <FPPopoverControllerDelegate, CMPopTipViewDelegate> {
     SKTipAlertView *customAlertView1;
+    BOOL isCMPopViewDisplayed;
 }
 
-@property (nonatomic, strong) UIView * customPopView1;
+@property (nonatomic, strong) CustomPopView * customPopView;
 
 @property (weak, nonatomic) IBOutlet UIButton *popoverButton;
 
@@ -46,16 +48,48 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    isCMPopViewDisplayed = NO;
     
     // Custom Pop SKTipAlertView
-    self.customPopView1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 100)];
-    [self.customPopView1 setBackgroundColor:[UIColor redColor]];
+    self.customPopView = [[[NSBundle mainBundle] loadNibNamed:@"CustomPopView"
+                                                        owner:self
+                                                      options:nil] objectAtIndex:0];
+    self.customPopView.titleLabel.text = @"TEXT";
+    self.customPopView.detailsLabel.text = @"DETAILS";
+    self.customPopView.frame = CGRectMake(0, 0, 280, 50);
+    
+    self.customPopView.layer.cornerRadius = 15;
+    self.customPopView.clipsToBounds = YES;
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.customPopView.bounds;
+    UIColor * blackColor = [UIColor blueColor];
+    gradient.colors = [NSArray arrayWithObjects:
+                       (id)[[self getColorWithAlpha:0.9 fromColor:blackColor] CGColor],
+                       (id)[[self getColorWithAlpha:0.7 fromColor:blackColor] CGColor],
+                       (id)[[self getColorWithAlpha:0.3 fromColor:blackColor] CGColor],
+                       (id)[[self getColorWithAlpha:0.1 fromColor:blackColor] CGColor],
+                       (id)[[self getColorWithAlpha:0.3 fromColor:blackColor] CGColor],
+                       (id)[[self getColorWithAlpha:0.7 fromColor:blackColor] CGColor],
+                       (id)[[self getColorWithAlpha:0.9 fromColor:blackColor] CGColor], nil];
+    [self.customPopView.layer insertSublayer:gradient atIndex:0];
+    
+    // self.customPopView.backgroundColor = [UIColor lightGrayColor];
     customAlertView1 = [SKTipAlertView sharedTipAlertView];
     
     // Custom CMPopTipView
     self.navBarLeftButtonPopTipView = [[CMPopTipView alloc] initWithTitle:@"Did you know?"
                                                                   message:@"BMW is the best"];
+    CGRect rext = self.navBarLeftButtonPopTipView.frame;
     [self customizeCMPopupView:self.navBarLeftButtonPopTipView];
+}
+
+-(UIColor *)getColorWithAlpha:(CGFloat )alpha fromColor:(UIColor *)color {
+    const CGFloat * components = CGColorGetComponents(color.CGColor);
+    return [UIColor colorWithRed:components[0]
+                           green:components[1]
+                            blue:components[2]
+                           alpha:alpha];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,13 +104,13 @@
         counter = 0;
     }
     switch (counter) {
-        case 0: [customAlertView1 showNotificationForView:self.customPopView1
+        case 0: [customAlertView1 showNotificationForView:self.customPopView
                                               forDuration:2
-                                              andPosition:SKTipAlertViewPositionBottom
+                                              andPosition:SKTipAlertViewPositionTop
                                                 permanent:YES];
             break;
         case 1:
-            [customAlertView1 showBlueNotificationForString:@"Blue Alert"
+            [customAlertView1 showBlueNotificationForString:@"Did you know? \n Parkinson comes with age and goes away later"
                                                 forDuration:1
                                                 andPosition:SKTipAlertViewPositionBottom
                                                   permanent:NO];
@@ -133,15 +167,15 @@
 #pragma mark CMPopTipView
 // Present a CMPopTipView pointing at a UIBarButtonItem in the nav bar
 - (IBAction)onNavBarPopup:(id)sender {
-    static BOOL isCMPopTipViewDisplayed = NO;
-    if (isCMPopTipViewDisplayed) {
-        isCMPopTipViewDisplayed = NO;
+    if (isCMPopViewDisplayed) {
+        isCMPopViewDisplayed = NO;
         [self.navBarLeftButtonPopTipView dismissAnimated:YES];
     }
     else {
-        isCMPopTipViewDisplayed = YES;
+        isCMPopViewDisplayed = YES;
         // Custom Pop CMPopTipView
         self.navBarLeftButtonPopTipView.delegate = self;
+        self.navBarLeftButtonPopTipView.message = @"You can’t swallow your tongue during a seizure. It's physically impossible.";
         [self.navBarLeftButtonPopTipView presentPointingAtBarButtonItem:self.navigationItem.rightBarButtonItem
                                                                animated:YES];
     }
@@ -205,6 +239,7 @@
 - (void)popTipViewWasDismissedByUser:(CMPopTipView *)popTipView {
     // Any cleanup code, such as releasing a CMPopTipView instance variable, if necessary
     self.roundRectButtonPopTipView = nil;
+    isCMPopViewDisplayed = NO;
 }
 
 #pragma mark - Native Popover

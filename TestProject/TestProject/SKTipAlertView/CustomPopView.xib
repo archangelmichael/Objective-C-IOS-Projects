@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Jew-bL-BaK" customClass="CustomPopView">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pkq-G1-WSz">
+                    <rect key="frame" x="8" y="0.0" width="264" height="33"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="HKZ-Ks-yh7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Parkinson comes with age." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bb2-Wo-0gb">
+                    <rect key="frame" x="8" y="33" width="264" height="67"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="0.86136842920000001" green="0.86215013340000002" blue="0.89007260099999996" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Bb2-Wo-0gb" firstAttribute="top" secondItem="Pkq-G1-WSz" secondAttribute="bottom" id="7wV-Hf-xVO"/>
+                <constraint firstItem="Pkq-G1-WSz" firstAttribute="leading" secondItem="Jew-bL-BaK" secondAttribute="leading" constant="8" id="Cz5-4t-eb2"/>
+                <constraint firstAttribute="centerX" secondItem="Bb2-Wo-0gb" secondAttribute="centerX" id="G5Z-tp-HFN"/>
+                <constraint firstAttribute="trailing" secondItem="Pkq-G1-WSz" secondAttribute="trailing" constant="8" id="GPw-Q4-Xcu"/>
+                <constraint firstAttribute="trailing" secondItem="Bb2-Wo-0gb" secondAttribute="trailing" constant="8" id="KQw-Eh-1Lx"/>
+                <constraint firstItem="Bb2-Wo-0gb" firstAttribute="leading" secondItem="Jew-bL-BaK" secondAttribute="leading" constant="8" id="RUa-BK-SOx"/>
+                <constraint firstAttribute="bottom" secondItem="Bb2-Wo-0gb" secondAttribute="bottom" id="Tgr-nG-Tg7"/>
+                <constraint firstItem="Pkq-G1-WSz" firstAttribute="top" secondItem="Jew-bL-BaK" secondAttribute="top" id="kjU-j2-Efk"/>
+                <constraint firstAttribute="centerX" secondItem="Pkq-G1-WSz" secondAttribute="centerX" id="rb5-Lv-UXS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="detailsLabel" destination="Bb2-Wo-0gb" id="CwH-Dn-a4P"/>
+                <outlet property="titleLabel" destination="Pkq-G1-WSz" id="s3g-vn-3PQ"/>
+            </connections>
+            <point key="canvasLocation" x="245" y="271"/>
+        </view>
+    </objects>
+</document>

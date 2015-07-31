@@ -36,6 +36,8 @@
 		198983C31B6A21930049C409 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 198983C11B6A21930049C409 /* WYStoryboardPopoverSegue.m */; };
 		198983C51B6A21A90049C409 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198983C41B6A21A90049C409 /* QuartzCore.framework */; };
 		198983CD1B6A36E20049C409 /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 198983CC1B6A36E20049C409 /* CMPopTipView.m */; };
+		198983D71B6A4E950049C409 /* CustomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 198983D61B6A4E950049C409 /* CustomPopView.m */; };
+		198983D91B6A4EA40049C409 /* CustomPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 198983D81B6A4EA40049C409 /* CustomPopView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,9 @@
 		198983C41B6A21A90049C409 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		198983CB1B6A36E20049C409 /* CMPopTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPopTipView.h; sourceTree = "<group>"; };
 		198983CC1B6A36E20049C409 /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPopTipView.m; sourceTree = "<group>"; };
+		198983D51B6A4E950049C409 /* CustomPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPopView.h; sourceTree = "<group>"; };
+		198983D61B6A4E950049C409 /* CustomPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPopView.m; sourceTree = "<group>"; };
+		198983D81B6A4EA40049C409 /* CustomPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPopView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +215,7 @@
 		198983991B6A18660049C409 /* SKTipAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				198983D41B6A4E7C0049C409 /* CustomView */,
 				1989839A1B6A18660049C409 /* SK-bgBlue.png */,
 				1989839B1B6A18660049C409 /* SK-bgBlue@2x.png */,
 				1989839C1B6A18660049C409 /* SK-bgGreen.png */,
@@ -266,6 +272,16 @@
 				198983CC1B6A36E20049C409 /* CMPopTipView.m */,
 			);
 			path = CMPopTipView;
+			sourceTree = "<group>";
+		};
+		198983D41B6A4E7C0049C409 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				198983D51B6A4E950049C409 /* CustomPopView.h */,
+				198983D61B6A4E950049C409 /* CustomPopView.m */,
+				198983D81B6A4EA40049C409 /* CustomPopView.xib */,
+			);
+			name = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +376,7 @@
 				198983A61B6A18660049C409 /* SK-bgGreen.png in Resources */,
 				198983BB1B6A1ED50049C409 /* TestFPViewController.xib in Resources */,
 				1989836F1B6A0C060049C409 /* Images.xcassets in Resources */,
+				198983D91B6A4EA40049C409 /* CustomPopView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198983D71B6A4E950049C409 /* CustomPopView.m in Sources */,
 				198983C21B6A21930049C409 /* WYPopoverController.m in Sources */,
 				198983B41B6A1C7F0049C409 /* FPPopoverController.m in Sources */,
 				198983B61B6A1C7F0049C409 /* FPTouchView.m in Sources */,
@@ -586,6 +604,7 @@
 				198983831B6A0C060049C409 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		198983841B6A0C060049C409 /* Build configuration list for PBXNativeTarget "TestProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -594,6 +613,7 @@
 				198983861B6A0C060049C409 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
