@@ -10,6 +10,10 @@
 
 typedef enum {
     VCPopup = 0,
+    VCScroll,
+    VCSegues,
+    VCPickSaveLoad,
+    VCImageAnimation,
     VCTypesCount
 } VCType;
 
@@ -68,15 +72,28 @@ typedef enum {
 
 -(NSString *)getStringFromVCType:(NSInteger)vcType {
     switch (vcType) {
-        case VCPopup: return @"VCPopup";
+        case VCPopup : return @"VCPopup";
+        case VCScroll : return @"VCScroll";
+        case VCSegues: return @"VCSegues";
+        case VCPickSaveLoad : return @"PickSaveLoadImage";
+        case VCImageAnimation : return @"VCImageAnimation";
         default: return @"VCEmpty";
     }
 }
 
 -(NSString *)getSegueIdForVCType:(NSInteger)vcType {
     switch (vcType) {
-        case VCPopup: return @"goToVCPopup";
+        case VCPopup : return @"goToVCPopup";
+        case VCScroll : return @"goToVCScroll";
+        case VCSegues : return @"goToVCSegues";
+        case VCPickSaveLoad : return @"goToPSLSegue";
+        case VCImageAnimation : return @"goToVCImageAnimation";
         default: return @"goToVCEmpty";
     }
+}
+
+- (void)returnToRoot {
+    [self dismissViewControllerAnimated:NO completion:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end
