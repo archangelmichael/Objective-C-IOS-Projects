@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eHD-jF-U6N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eHD-jF-U6N">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -48,6 +48,7 @@
                         <segue destination="BV5-Iq-12W" kind="show" identifier="goToVCSegues" id="3M3-1q-sk2"/>
                         <segue destination="YLv-44-Wff" kind="show" identifier="goToPSLSegue" id="evn-7G-4ld"/>
                         <segue destination="rN6-fU-ukj" kind="show" identifier="goToVCImageAnimation" id="3Ns-r6-chs"/>
+                        <segue destination="ujq-c3-0y9" kind="show" identifier="goToVCSearch" id="Sst-Tk-Got"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ng0-gI-PKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -522,6 +523,79 @@
             </objects>
             <point key="canvasLocation" x="444" y="947"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="abb-jG-JeV">
+            <objects>
+                <viewController id="ujq-c3-0y9" customClass="SearchVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xfu-kU-M6X"/>
+                        <viewControllerLayoutGuide type="bottom" id="yD8-Mk-dYD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5xM-Jz-xbh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mlh-vj-Iuy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="f2D-M4-KRC">
+                                <rect key="frame" x="16" y="113" width="288" height="282"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="282" id="8Dy-cG-dNI"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="SearchCellId" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchCellId" id="pta-DM-F9L">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pta-DM-F9L" id="9db-HL-i8t">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rP7-c4-aVT">
+                                <rect key="frame" x="0.0" y="64" width="320" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="GFD-QF-uum"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f2D-M4-KRC" firstAttribute="leading" secondItem="5xM-Jz-xbh" secondAttribute="leadingMargin" id="2N5-8h-QGz"/>
+                            <constraint firstItem="yD8-Mk-dYD" firstAttribute="top" secondItem="mlh-vj-Iuy" secondAttribute="bottom" id="4Av-uO-s0a"/>
+                            <constraint firstItem="rP7-c4-aVT" firstAttribute="top" secondItem="Xfu-kU-M6X" secondAttribute="bottom" id="5by-oh-8Bm"/>
+                            <constraint firstItem="rP7-c4-aVT" firstAttribute="leading" secondItem="5xM-Jz-xbh" secondAttribute="leadingMargin" constant="-16" id="84V-VX-5SP"/>
+                            <constraint firstItem="mlh-vj-Iuy" firstAttribute="top" secondItem="Xfu-kU-M6X" secondAttribute="bottom" constant="-64" id="PIp-y1-Sw2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rP7-c4-aVT" secondAttribute="trailing" constant="-16" id="YpG-nc-mJr"/>
+                            <constraint firstItem="mlh-vj-Iuy" firstAttribute="leading" secondItem="5xM-Jz-xbh" secondAttribute="leadingMargin" constant="-16" id="ayQ-sK-sFC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mlh-vj-Iuy" secondAttribute="trailing" constant="-16" id="kYi-5Y-LUb"/>
+                            <constraint firstItem="f2D-M4-KRC" firstAttribute="trailing" secondItem="5xM-Jz-xbh" secondAttribute="trailingMargin" id="wYS-0k-TFc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="6dz-U0-FFC"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mvMap" destination="mlh-vj-Iuy" id="Sd2-M4-MEr"/>
+                        <outlet property="searchBarView" destination="rP7-c4-aVT" id="dYl-Cr-1ST"/>
+                        <outlet property="searchDisplayController" destination="PjC-yM-Zfu" id="15t-aK-Dar"/>
+                        <outlet property="tableView" destination="f2D-M4-KRC" id="OJ1-UG-ShM"/>
+                        <outlet property="tvSearch" destination="f2D-M4-KRC" id="dOv-RW-KFu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iq9-UT-Qs5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="PjC-yM-Zfu">
+                    <connections>
+                        <outlet property="delegate" destination="ujq-c3-0y9" id="hz7-lV-USc"/>
+                        <outlet property="searchContentsController" destination="ujq-c3-0y9" id="HXb-fa-xjb"/>
+                        <outlet property="searchResultsDataSource" destination="ujq-c3-0y9" id="Mfx-9I-807"/>
+                        <outlet property="searchResultsDelegate" destination="ujq-c3-0y9" id="yQK-f5-Tfq"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1030" y="947"/>
+        </scene>
         <!--ScrollVC-->
         <scene sceneID="d6N-3y-N8g">
             <objects>
@@ -684,6 +758,6 @@
         <image name="icon_form-ok" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="o8p-mv-haO"/>
+        <segue reference="AEq-oL-4VQ"/>
     </inferredMetricsTieBreakers>
 </document>

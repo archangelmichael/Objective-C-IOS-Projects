@@ -14,6 +14,7 @@ typedef enum {
     VCSegues,
     VCPickSaveLoad,
     VCImageAnimation,
+    VCSearch,
     VCTypesCount
 } VCType;
 
@@ -77,6 +78,7 @@ typedef enum {
         case VCSegues: return @"VCSegues";
         case VCPickSaveLoad : return @"PickSaveLoadImage";
         case VCImageAnimation : return @"VCImageAnimation";
+        case VCSearch : return @"VCAutocompleteSearch";
         default: return @"VCEmpty";
     }
 }
@@ -88,6 +90,7 @@ typedef enum {
         case VCSegues : return @"goToVCSegues";
         case VCPickSaveLoad : return @"goToPSLSegue";
         case VCImageAnimation : return @"goToVCImageAnimation";
+        case VCSearch : return @"goToVCSearch";
         default: return @"goToVCEmpty";
     }
 }

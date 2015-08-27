@@ -80,7 +80,7 @@
     // Custom CMPopTipView
     self.navBarLeftButtonPopTipView = [[CMPopTipView alloc] initWithTitle:@"Did you know?"
                                                                   message:@"BMW is the best"];
-    CGRect rext = self.navBarLeftButtonPopTipView.frame;
+    // CGRect rect = self.navBarLeftButtonPopTipView.frame;
     [self customizeCMPopupView:self.navBarLeftButtonPopTipView];
 }
 

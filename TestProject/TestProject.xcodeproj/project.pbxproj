@@ -11,6 +11,10 @@
 		19466CDC1B7495F800143B8C /* Level1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19466CDB1B7495F800143B8C /* Level1VC.m */; };
 		19466CDF1B74975800143B8C /* Level2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19466CDE1B74975800143B8C /* Level2VC.m */; };
 		19466CE21B74980200143B8C /* OKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19466CE11B74980200143B8C /* OKVC.m */; };
+		195C57171B8710E50059D335 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 195C57161B8710E50059D335 /* SearchVC.m */; };
+		195C57191B87128E0059D335 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195C57181B87128E0059D335 /* MapKit.framework */; };
+		195C571C1B8719AB0059D335 /* Candy.m in Sources */ = {isa = PBXBuildFile; fileRef = 195C571B1B8719AB0059D335 /* Candy.m */; };
+		195C57221B8743A00059D335 /* CustonSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 195C57211B8743A00059D335 /* CustonSearchController.m */; };
 		198983641B6A0C060049C409 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 198983631B6A0C060049C409 /* main.m */; };
 		198983671B6A0C060049C409 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 198983661B6A0C060049C409 /* AppDelegate.m */; };
 		1989836D1B6A0C060049C409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1989836B1B6A0C060049C409 /* Main.storyboard */; };
@@ -65,6 +69,13 @@
 		19466CDE1B74975800143B8C /* Level2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level2VC.m; sourceTree = "<group>"; };
 		19466CE01B74980200143B8C /* OKVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKVC.h; sourceTree = "<group>"; };
 		19466CE11B74980200143B8C /* OKVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKVC.m; sourceTree = "<group>"; };
+		195C57151B8710E50059D335 /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
+		195C57161B8710E50059D335 /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
+		195C57181B87128E0059D335 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		195C571A1B8719AB0059D335 /* Candy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Candy.h; sourceTree = "<group>"; };
+		195C571B1B8719AB0059D335 /* Candy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Candy.m; sourceTree = "<group>"; };
+		195C57201B8743A00059D335 /* CustonSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustonSearchController.h; sourceTree = "<group>"; };
+		195C57211B8743A00059D335 /* CustonSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustonSearchController.m; sourceTree = "<group>"; };
 		1989835E1B6A0C060049C409 /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198983621B6A0C060049C409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		198983631B6A0C060049C409 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -127,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				195C57191B87128E0059D335 /* MapKit.framework in Frameworks */,
 				198983C51B6A21A90049C409 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,9 +175,23 @@
 			name = Segues;
 			sourceTree = "<group>";
 		};
+		195C57141B8710C60059D335 /* Autocomplete Search */ = {
+			isa = PBXGroup;
+			children = (
+				195C57151B8710E50059D335 /* SearchVC.h */,
+				195C57161B8710E50059D335 /* SearchVC.m */,
+				195C571A1B8719AB0059D335 /* Candy.h */,
+				195C571B1B8719AB0059D335 /* Candy.m */,
+				195C57201B8743A00059D335 /* CustonSearchController.h */,
+				195C57211B8743A00059D335 /* CustonSearchController.m */,
+			);
+			name = "Autocomplete Search";
+			sourceTree = "<group>";
+		};
 		198983551B6A0C050049C409 = {
 			isa = PBXGroup;
 			children = (
+				195C57181B87128E0059D335 /* MapKit.framework */,
 				198983C41B6A21A90049C409 /* QuartzCore.framework */,
 				198983601B6A0C060049C409 /* TestProject */,
 				1989837A1B6A0C060049C409 /* TestProjectTests */,
@@ -185,6 +211,7 @@
 		198983601B6A0C060049C409 /* TestProject */ = {
 			isa = PBXGroup;
 			children = (
+				195C57141B8710C60059D335 /* Autocomplete Search */,
 				19BDDB0D1B7A7D2000DD3880 /* ImageAnimation */,
 				19BDDB091B79FBF100DD3880 /* Pick save and load image */,
 				19466CD91B7495DE00143B8C /* Segues */,
@@ -465,6 +492,8 @@
 				19466CDC1B7495F800143B8C /* Level1VC.m in Sources */,
 				1989838D1B6A0CCB0049C409 /* MainTableViewController.m in Sources */,
 				19466CDF1B74975800143B8C /* Level2VC.m in Sources */,
+				195C571C1B8719AB0059D335 /* Candy.m in Sources */,
+				195C57221B8743A00059D335 /* CustonSearchController.m in Sources */,
 				198983AB1B6A18660049C409 /* SKTipAlertView.m in Sources */,
 				198983AA1B6A18660049C409 /* SKAlertView.m in Sources */,
 				198983B51B6A1C7F0049C409 /* FPPopoverView.m in Sources */,
@@ -473,6 +502,7 @@
 				198983961B6A13B60049C409 /* UIPopoverController+iPhone.m in Sources */,
 				19BDDB101B7A7D3D00DD3880 /* ImageAnimationVC.m in Sources */,
 				198983C31B6A21930049C409 /* WYStoryboardPopoverSegue.m in Sources */,
+				195C57171B8710E50059D335 /* SearchVC.m in Sources */,
 				198983891B6A0CA60049C409 /* PopupsVC.m in Sources */,
 				198983911B6A125C0049C409 /* PopoverViewController.m in Sources */,
 				19BDDB0C1B79FC1D00DD3880 /* PickSaveLoadImageViewController.m in Sources */,
@@ -604,6 +634,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -614,6 +645,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
