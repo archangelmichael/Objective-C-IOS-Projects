@@ -7,7 +7,8 @@
 //
 
 #import "MessagesVC.h"
-#import <Parse/Parse.h>
+#import "AppDelegate.h"
+#import "Constants.h"
 
 @interface MessagesVC ()
 
@@ -18,12 +19,22 @@
 @end
 
 @implementation MessagesVC {
+    AppDelegate * app;
     NSMutableArray * currentMessages;
     NSDateFormatter * dateFormatter;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onReplyNotificationReceived)
+                                                 name:NotificationActionReplyName
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onDeleteNotificationReceived)
+                                                 name:NotificationActionDeleteName
+                                               object:nil];
     currentMessages = [NSMutableArray array];
     dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd MMMM yyyy"];
@@ -38,7 +49,7 @@
     self.tvMessages.dataSource = self;
     self.tvMessages.delegate = self;
     self.tvMessages.bounces = YES;
-    
+    [self.tvMessages setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.tvNewMessage.delegate = self;
     [self getMessages];
 }
@@ -50,6 +61,7 @@
 
 - (IBAction)onLogout:(id)sender {
     [PFUser logOut];
+    [app setUserDefaultUsername:@"" password:@""];
     [self onClose];
 }
 
@@ -59,7 +71,17 @@
     newMessage[@"date"] = [dateFormatter stringFromDate:[NSDate date]];
     [newMessage saveInBackgroundWithBlock:^(BOOL done, NSError *error) {
         if (!error) {
+            if (DEVICE_VERSION >= 8) {
+                [app scheduleNotificationWithTitle:@"New comment added"
+                                              date:[NSDate dateWithTimeIntervalSinceNow:5]];
+            }
+            else {
+                [app scheduleSimpleLocalNotificationWithTitle:@"New comment added"
+                                                         date:[NSDate dateWithTimeIntervalSinceNow:5]];
+            }
             
+            
+            // [self sendLocalNotification];
             self.tvNewMessage.text = @"";
             [self getMessages];
         }
@@ -69,12 +91,22 @@
     }];
 }
 
+- (void)sendLocalNotification {
+    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:2];
+    localNotification.alertBody = @"Your alert message";
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+}
+
 - (void)getMessages {
+    [currentMessages removeAllObjects];
     PFQuery *query = [PFQuery queryWithClassName:@"Message"];
     [query whereKey:@"date" equalTo:[dateFormatter stringFromDate:[NSDate date]]];
     NSArray * messages = [query findObjects];
-    currentMessages = [NSMutableArray arrayWithArray:messages];
+    [currentMessages addObjectsFromArray:messages];
     [self.tvMessages reloadData];
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
 
 - (void)onClose {
@@ -84,6 +116,15 @@
     else {
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+}
+
+#pragma mark NSNotificationCenter Methods
+- (void) onReplyNotificationReceived {
+    [self textViewDidBeginEditing:self.tvNewMessage];
+}
+
+- (void) onDeleteNotificationReceived {
+    // TODO: Delete Item
 }
 
 #pragma mark UITextViewDelegate
@@ -116,29 +157,26 @@ replacementText:(NSString *)text {
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //assuming some_table_data respresent the table data
-    if (currentMessages.count == 0) {
-        UILabel *messageLbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,
-                                                                        self.tvMessages.bounds.size.width,
-                                                                        self.tvMessages.bounds.size.height)];
-        //set the message
-        messageLbl.text = @"No messages from today";
-        //center the text
-        messageLbl.textAlignment = NSTextAlignmentCenter;
-        //auto size the text
-        [messageLbl sizeToFit];
-        //set back to label view
-        self.tvMessages.backgroundView = messageLbl;
-        //no separator
-        self.tvMessages.separatorStyle = UITableViewCellSeparatorStyleNone;
-        return 0;
-    }
-    
     return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return currentMessages.count;
+    if(currentMessages.count > 0){
+        self.tvMessages.backgroundView = nil;
+        return currentMessages.count;
+    }
+    
+    // Display a message when the table is empty
+    UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    messageLabel.text = @"No data, pull to refresh";
+    messageLabel.textColor = [UIColor blackColor];
+    messageLabel.numberOfLines = 0;
+    messageLabel.textAlignment = NSTextAlignmentCenter;
+    [messageLabel sizeToFit];
+    
+    self.tvMessages.backgroundView = messageLabel;
+    return 0;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -149,6 +187,37 @@ replacementText:(NSString *)text {
     
     cell.textLabel.text = currentMessages[currentMessages.count - 1 - indexPath.row][@"text"];
     return cell;
+}
+
+#pragma mark UITableViewDelegate methods
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"Delete me";
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    PFObject * messageToDelete = currentMessages[indexPath.row];
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [messageToDelete deleteInBackgroundWithBlock:^(BOOL done, NSError *error) {
+            if (!error) {
+                [self removeMessageFromTable:tableView atIndexPath:indexPath];
+            }
+        }];
+    }
+    
+    [tableView setEditing:NO animated:YES];
+}
+
+-(void)removeMessageFromTable:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath {
+    [currentMessages removeObjectAtIndex:indexPath.row];
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 /*

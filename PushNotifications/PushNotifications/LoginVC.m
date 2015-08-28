@@ -7,18 +7,27 @@
 //
 
 #import "LoginVC.h"
-#import <Parse/Parse.h>
+#import "AppDelegate.h"
 
 @interface LoginVC ()
 @property (weak, nonatomic) IBOutlet UITextField *username;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loading;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @end
 
-@implementation LoginVC
+@implementation LoginVC {
+    AppDelegate * app;
+    PFUser * loggedUser;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    app = (AppDelegate *)[UIApplication sharedApplication].delegate;
     self.username.delegate = self.password.delegate = self;
+    loggedUser = [app loadUserData];
+    if (loggedUser) {
+        [self loginUser];
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -28,32 +37,41 @@
 }
 
 - (IBAction)onLogin:(id)sender {
-    PFUser *user = [PFUser user];
-    user.username = self.username.text;
-    user.password = self.password.text;
-    user.email = @"email@example.com";
-    if (user.username.length < 4 || user.password.length < 4) {
+    NSString * enteredUsername = self.username.text;
+    NSString * enteredPassword = self.password.text;
+    if (enteredUsername.length < 4 || enteredPassword.length < 4) {
         return;
     }
     
+    loggedUser = [PFUser user];
+    loggedUser.username = enteredUsername;
+    loggedUser.password = enteredPassword;
+    loggedUser.email = @"email@example.com";
     // user[@"phone"] = @"415-392-0202";
-    
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [self loginUser];
+}
+
+-(void)loginUser {
+    [self.loading startAnimating];
+    [loggedUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-            // Hooray! Let them use the app now.
+            [app setUserDefaultUsername:loggedUser.username password:loggedUser.password];
             [self performSegueWithIdentifier:@"goToMessagesVC" sender:self];
+            [self.loading stopAnimating];
         } else {
-            NSLog(@"Register error: %@", error.userInfo);
-            // Show the errorString somewhere and let the user try again.
-            [PFUser logInWithUsernameInBackground:self.username.text
-                                         password:self.password.text
+            // NSLog(@"Register error: %@", error.userInfo);
+            [PFUser logInWithUsernameInBackground:loggedUser.username
+                                         password:loggedUser.password
                                             block:^(PFUser *user, NSError *error) {
                                                 if (user) {
-                                                    // Do stuff after successful login.
+                                                    [app setUserDefaultUsername:loggedUser.username password:loggedUser.password];
                                                     [self performSegueWithIdentifier:@"goToMessagesVC" sender:self];
+                                                    [self.loading stopAnimating];
                                                 } else {
-                                                    // The login failed. Check error to see why.
+                                                    loggedUser = nil;
+                                                    [app setUserDefaultUsername:@"" password:@""];
                                                     NSLog(@"Register error: %@", error.userInfo);
+                                                    [self.loading stopAnimating];
                                                 }
                                             }];
         }

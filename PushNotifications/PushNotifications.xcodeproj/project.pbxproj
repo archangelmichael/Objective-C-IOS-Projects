@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1954D1261B90372D00A64255 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1954D1251B90372D00A64255 /* Constants.m */; };
 		19BF578B1B8F22F9001EC63E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BF578A1B8F22F9001EC63E /* main.m */; };
 		19BF578E1B8F22F9001EC63E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BF578D1B8F22F9001EC63E /* AppDelegate.m */; };
 		19BF57941B8F22F9001EC63E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BF57921B8F22F9001EC63E /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1954D1241B90372D00A64255 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		1954D1251B90372D00A64255 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		19BF57851B8F22F9001EC63E /* PushNotifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushNotifications.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BF57891B8F22F9001EC63E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19BF578A1B8F22F9001EC63E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				19BF57C81B8F2686001EC63E /* LoginVC.m */,
 				19BF57CA1B8F26A1001EC63E /* MessagesVC.h */,
 				19BF57CB1B8F26A1001EC63E /* MessagesVC.m */,
+				1954D1241B90372D00A64255 /* Constants.h */,
+				1954D1251B90372D00A64255 /* Constants.m */,
 			);
 			path = PushNotifications;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1954D1261B90372D00A64255 /* Constants.m in Sources */,
 				19BF578E1B8F22F9001EC63E /* AppDelegate.m in Sources */,
 				19BF57C91B8F2686001EC63E /* LoginVC.m in Sources */,
 				19BF57CC1B8F26A1001EC63E /* MessagesVC.m in Sources */,
@@ -410,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -428,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -495,6 +503,7 @@
 				19BF57AA1B8F22FA001EC63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19BF57AB1B8F22FA001EC63E /* Build configuration list for PBXNativeTarget "PushNotificationsTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +512,7 @@
 				19BF57AD1B8F22FA001EC63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
