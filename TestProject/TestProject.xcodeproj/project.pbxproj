@@ -46,8 +46,11 @@
 		198983CD1B6A36E20049C409 /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 198983CC1B6A36E20049C409 /* CMPopTipView.m */; };
 		198983D71B6A4E950049C409 /* CustomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 198983D61B6A4E950049C409 /* CustomPopView.m */; };
 		198983D91B6A4EA40049C409 /* CustomPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 198983D81B6A4EA40049C409 /* CustomPopView.xib */; };
+		19B26FC21B9341D5005E9730 /* ImageUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B26FC11B9341D5005E9730 /* ImageUploadVC.m */; };
+		19B26FC61B9341FD005E9730 /* ImageDataRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B26FC51B9341FD005E9730 /* ImageDataRequester.m */; };
 		19BDDB0C1B79FC1D00DD3880 /* PickSaveLoadImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDDB0B1B79FC1D00DD3880 /* PickSaveLoadImageViewController.m */; };
 		19BDDB101B7A7D3D00DD3880 /* ImageAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDDB0F1B7A7D3D00DD3880 /* ImageAnimationVC.m */; };
+		CD7D7A2451D612E8F0EE5427 /* libPods-TestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D39BD12B47C6AC6541981139 /* libPods-TestProject.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		049C4C1B4469E9755560F7D3 /* Pods-TestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestProject/Pods-TestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		19466CD61B73467F00143B8C /* ScrollVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollVC.h; sourceTree = "<group>"; };
 		19466CD71B73467F00143B8C /* ScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollVC.m; sourceTree = "<group>"; };
 		19466CDA1B7495F800143B8C /* Level1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level1VC.h; sourceTree = "<group>"; };
@@ -127,10 +131,16 @@
 		198983D51B6A4E950049C409 /* CustomPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPopView.h; sourceTree = "<group>"; };
 		198983D61B6A4E950049C409 /* CustomPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPopView.m; sourceTree = "<group>"; };
 		198983D81B6A4EA40049C409 /* CustomPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPopView.xib; sourceTree = "<group>"; };
+		19B26FC01B9341D5005E9730 /* ImageUploadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUploadVC.h; sourceTree = "<group>"; };
+		19B26FC11B9341D5005E9730 /* ImageUploadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUploadVC.m; sourceTree = "<group>"; };
+		19B26FC41B9341FD005E9730 /* ImageDataRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDataRequester.h; sourceTree = "<group>"; };
+		19B26FC51B9341FD005E9730 /* ImageDataRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDataRequester.m; sourceTree = "<group>"; };
 		19BDDB0A1B79FC1D00DD3880 /* PickSaveLoadImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickSaveLoadImageViewController.h; sourceTree = "<group>"; };
 		19BDDB0B1B79FC1D00DD3880 /* PickSaveLoadImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickSaveLoadImageViewController.m; sourceTree = "<group>"; };
 		19BDDB0E1B7A7D3D00DD3880 /* ImageAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAnimationVC.h; sourceTree = "<group>"; };
 		19BDDB0F1B7A7D3D00DD3880 /* ImageAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAnimationVC.m; sourceTree = "<group>"; };
+		D39BD12B47C6AC6541981139 /* libPods-TestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9DC89D0997208064A633051 /* Pods-TestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestProject/Pods-TestProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,7 @@
 			files = (
 				195C57191B87128E0059D335 /* MapKit.framework in Frameworks */,
 				198983C51B6A21A90049C409 /* QuartzCore.framework in Frameworks */,
+				CD7D7A2451D612E8F0EE5427 /* libPods-TestProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +164,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E30363F191D1541006C0C0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				049C4C1B4469E9755560F7D3 /* Pods-TestProject.debug.xcconfig */,
+				F9DC89D0997208064A633051 /* Pods-TestProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		19466CD51B73466500143B8C /* Scrolling */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +216,8 @@
 				198983601B6A0C060049C409 /* TestProject */,
 				1989837A1B6A0C060049C409 /* TestProjectTests */,
 				1989835F1B6A0C060049C409 /* Products */,
+				0E30363F191D1541006C0C0D /* Pods */,
+				D4D08B6C6BCDEA419577E211 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,6 +247,7 @@
 				1989838A1B6A0CAE0049C409 /* Popups */,
 				1989838B1B6A0CCB0049C409 /* MainTableViewController.h */,
 				1989838C1B6A0CCB0049C409 /* MainTableViewController.m */,
+				19B26FC31B9341DD005E9730 /* ImageUpload */,
 			);
 			path = TestProject;
 			sourceTree = "<group>";
@@ -355,6 +378,17 @@
 			name = CustomView;
 			sourceTree = "<group>";
 		};
+		19B26FC31B9341DD005E9730 /* ImageUpload */ = {
+			isa = PBXGroup;
+			children = (
+				19B26FC01B9341D5005E9730 /* ImageUploadVC.h */,
+				19B26FC11B9341D5005E9730 /* ImageUploadVC.m */,
+				19B26FC41B9341FD005E9730 /* ImageDataRequester.h */,
+				19B26FC51B9341FD005E9730 /* ImageDataRequester.m */,
+			);
+			name = ImageUpload;
+			sourceTree = "<group>";
+		};
 		19BDDB091B79FBF100DD3880 /* Pick save and load image */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +407,14 @@
 			name = ImageAnimation;
 			sourceTree = "<group>";
 		};
+		D4D08B6C6BCDEA419577E211 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D39BD12B47C6AC6541981139 /* libPods-TestProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -380,9 +422,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 198983811B6A0C060049C409 /* Build configuration list for PBXNativeTarget "TestProject" */;
 			buildPhases = (
+				0851BE6A3957926ED53801A1 /* Check Pods Manifest.lock */,
 				1989835A1B6A0C060049C409 /* Sources */,
 				1989835B1B6A0C060049C409 /* Frameworks */,
 				1989835C1B6A0C060049C409 /* Resources */,
+				01ABA3CAD5308A31ECDE7D48 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -478,6 +522,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01ABA3CAD5308A31ECDE7D48 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestProject/Pods-TestProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0851BE6A3957926ED53801A1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1989835A1B6A0C060049C409 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -490,6 +567,7 @@
 				198983B61B6A1C7F0049C409 /* FPTouchView.m in Sources */,
 				198983BA1B6A1ED50049C409 /* TestFPViewController.m in Sources */,
 				19466CDC1B7495F800143B8C /* Level1VC.m in Sources */,
+				19B26FC21B9341D5005E9730 /* ImageUploadVC.m in Sources */,
 				1989838D1B6A0CCB0049C409 /* MainTableViewController.m in Sources */,
 				19466CDF1B74975800143B8C /* Level2VC.m in Sources */,
 				195C571C1B8719AB0059D335 /* Candy.m in Sources */,
@@ -499,6 +577,7 @@
 				198983B51B6A1C7F0049C409 /* FPPopoverView.m in Sources */,
 				198983671B6A0C060049C409 /* AppDelegate.m in Sources */,
 				198983CD1B6A36E20049C409 /* CMPopTipView.m in Sources */,
+				19B26FC61B9341FD005E9730 /* ImageDataRequester.m in Sources */,
 				198983961B6A13B60049C409 /* UIPopoverController+iPhone.m in Sources */,
 				19BDDB101B7A7D3D00DD3880 /* ImageAnimationVC.m in Sources */,
 				198983C31B6A21930049C409 /* WYStoryboardPopoverSegue.m in Sources */,
@@ -631,6 +710,7 @@
 		};
 		198983821B6A0C060049C409 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 049C4C1B4469E9755560F7D3 /* Pods-TestProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestProject/Info.plist;
@@ -642,6 +722,7 @@
 		};
 		198983831B6A0C060049C409 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9DC89D0997208064A633051 /* Pods-TestProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestProject/Info.plist;
