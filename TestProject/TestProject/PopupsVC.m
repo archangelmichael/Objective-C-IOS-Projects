@@ -82,6 +82,8 @@
                                                                   message:@"BMW is the best"];
     // CGRect rect = self.navBarLeftButtonPopTipView.frame;
     [self customizeCMPopupView:self.navBarLeftButtonPopTipView];
+    
+    [self setGradientToButtonWithImage];
 }
 
 -(UIColor *)getColorWithAlpha:(CGFloat )alpha fromColor:(UIColor *)color {
@@ -95,6 +97,26 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) setGradientToButtonWithImage {
+    self.btnWithGradient.layer.cornerRadius = self.btnWithGradient.frame.size.width/2;
+    self.btnWithGradient.clipsToBounds = YES;
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.frame = self.btnWithGradient.layer.bounds;
+    
+    gradientLayer.colors = [NSArray arrayWithObjects:
+                            (id)[UIColor colorWithRed:142/255.0 green:2/255.0 blue:34/255.0 alpha:0.9f].CGColor,
+                            (id)[UIColor colorWithRed:7/255.0 green:198/255.0 blue:3/255.0 alpha:0.8f].CGColor,
+                            nil];
+    
+    gradientLayer.locations = [NSArray arrayWithObjects:
+                               [NSNumber numberWithFloat:0.0f],
+                               [NSNumber numberWithFloat:1.0f],
+                               nil];
+    
+    gradientLayer.cornerRadius = self.btnWithGradient.layer.cornerRadius;
+    [self.btnWithGradient.layer addSublayer:gradientLayer];
 }
 
 #pragma mark - SKTipAlertViewPopover

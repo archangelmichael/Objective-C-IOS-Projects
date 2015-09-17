@@ -41,6 +41,22 @@ NSString * const PRIVATE_KEY = @"5674572744cd8788a51e";
     return self;
 }
 
+-(void)getImagesWithSuccess:(void(^)(AFHTTPRequestOperation *operation, id responseObject)) success
+                        failure:(void(^)(AFHTTPRequestOperation *operation, NSError *error)) failure {
+    NSString * relativeURLPath = [NSString stringWithFormat:@"/files/?stored=true"];
+    NSDictionary * headers = @{
+                               @"Authorization" : [NSString stringWithFormat:@"Uploadcare.Simple %@:%@", PUBLIC_KEY, PRIVATE_KEY]
+                               };
+    NSDictionary * parameters = nil;
+    NSMutableURLRequest * request = [self createURLRequestToAPIURL:relativeURLPath
+                                                        withMethod:@"GET"
+                                                       withHeaders:headers
+                                                    withParameters:parameters];
+    AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [op setCompletionBlockWithSuccess:success failure:failure];
+    [op start];
+}
+
 -(void)uploadImageData:(NSData *) imageData
            withSuccess:(void(^)(AFHTTPRequestOperation *operation, id responseObject)) success
                failure:(void(^)(AFHTTPRequestOperation *operation, NSError *error)) failure {
@@ -83,6 +99,23 @@ NSString * const PRIVATE_KEY = @"5674572744cd8788a51e";
     [op start];
 }
 
+-(void)deleteImageForID:(NSString *)imageID
+            withSuccess:(void (^)(AFHTTPRequestOperation *, id))success
+                failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure {
+    NSString * relativeURLPath = [NSString stringWithFormat:@"/files/%@/", imageID];
+    NSDictionary * headers = @{
+                               @"Authorization" : [NSString stringWithFormat:@"Uploadcare.Simple %@:%@", PUBLIC_KEY, PRIVATE_KEY]
+                               };
+    NSDictionary * parameters = nil;
+    NSMutableURLRequest * request = [self createURLRequestToAPIURL:relativeURLPath
+                                                        withMethod:@"DELETE"
+                                                       withHeaders:headers
+                                                    withParameters:parameters];
+    AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [op setCompletionBlockWithSuccess:success failure:failure];
+    [op start];
+}
+
 -(void)getImageFromURL:(NSString *)imageURL
            withSuccess:(void (^)(AFHTTPRequestOperation *, id))success
                failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure {
@@ -99,9 +132,10 @@ NSString * const PRIVATE_KEY = @"5674572744cd8788a51e";
                                   withHeaders:(NSDictionary *)headers
                                withParameters:(NSDictionary *)parameters {
     // Set complete URL
-    NSURL * completeURL = [NSURL URLWithString:relativeURL relativeToURL:[NSURL URLWithString:BASE_API_URL_PATH]];
-    // Set request to complete URL
+    NSURL * completeURL = [NSURL URLWithString:relativeURL
+                                 relativeToURL:[NSURL URLWithString:BASE_API_URL_PATH]];
     
+    // Set request to complete URL
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:completeURL];
     [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     // Set request method
@@ -129,6 +163,7 @@ NSString * const PRIVATE_KEY = @"5674572744cd8788a51e";
     [request setAllHTTPHeaderFields:headers];
     // Set request parameteres
     request.HTTPBody = [self httpBodyForParamsDictionary:parameters];
+    
     return request;
 }
 

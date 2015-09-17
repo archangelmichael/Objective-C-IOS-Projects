@@ -16,6 +16,7 @@ typedef enum {
     VCImageAnimation,
     VCSearch,
     VCImageUpload,
+    VCResizableCells,
     VCTypesCount
 } VCType;
 
@@ -81,6 +82,7 @@ typedef enum {
         case VCImageAnimation : return @"VCImageAnimation";
         case VCSearch : return @"VCAutocompleteSearch";
         case VCImageUpload : return @"VCImageUpload";
+        case VCResizableCells : return @"VCResizableCells";
         default: return @"VCEmpty";
     }
 }
@@ -94,6 +96,7 @@ typedef enum {
         case VCImageAnimation : return @"goToVCImageAnimation";
         case VCSearch : return @"goToVCSearch";
         case VCImageUpload : return @"goToImageUpload";
+        case VCResizableCells : return @"goToResizableCells";
         default: return @"goToVCEmpty";
     }
 }

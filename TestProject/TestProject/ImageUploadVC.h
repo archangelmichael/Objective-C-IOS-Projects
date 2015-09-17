@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CMPopTipView.h"
 
-@interface ImageUploadVC : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ImageUploadVC : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CMPopTipViewDelegate>
 
 @end

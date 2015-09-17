@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1935FF141BA83EF800B83ECB /* ResizableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1935FF131BA83EF800B83ECB /* ResizableTableViewController.m */; };
+		1935FF181BA83F8B00B83ECB /* ResizableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1935FF161BA83F8B00B83ECB /* ResizableTableViewCell.m */; };
+		1935FF191BA83F8B00B83ECB /* ResizableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1935FF171BA83F8B00B83ECB /* ResizableTableViewCell.xib */; };
 		19466CD81B73467F00143B8C /* ScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19466CD71B73467F00143B8C /* ScrollVC.m */; };
 		19466CDC1B7495F800143B8C /* Level1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19466CDB1B7495F800143B8C /* Level1VC.m */; };
 		19466CDF1B74975800143B8C /* Level2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19466CDE1B74975800143B8C /* Level2VC.m */; };
@@ -50,6 +53,9 @@
 		19B26FC61B9341FD005E9730 /* ImageDataRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B26FC51B9341FD005E9730 /* ImageDataRequester.m */; };
 		19BDDB0C1B79FC1D00DD3880 /* PickSaveLoadImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDDB0B1B79FC1D00DD3880 /* PickSaveLoadImageViewController.m */; };
 		19BDDB101B7A7D3D00DD3880 /* ImageAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDDB0F1B7A7D3D00DD3880 /* ImageAnimationVC.m */; };
+		19CDAFFB1BA96D000062F581 /* AutoResizableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CDAFFA1BA96D000062F581 /* AutoResizableTableViewController.m */; };
+		19CDAFFF1BA96D4D0062F581 /* AutoResizableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CDAFFD1BA96D4D0062F581 /* AutoResizableTableViewCell.m */; };
+		19CDB0001BA96D4D0062F581 /* AutoResizableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19CDAFFE1BA96D4D0062F581 /* AutoResizableTableViewCell.xib */; };
 		CD7D7A2451D612E8F0EE5427 /* libPods-TestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D39BD12B47C6AC6541981139 /* libPods-TestProject.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +71,11 @@
 
 /* Begin PBXFileReference section */
 		049C4C1B4469E9755560F7D3 /* Pods-TestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestProject/Pods-TestProject.debug.xcconfig"; sourceTree = "<group>"; };
+		1935FF121BA83EF800B83ECB /* ResizableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizableTableViewController.h; sourceTree = "<group>"; };
+		1935FF131BA83EF800B83ECB /* ResizableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizableTableViewController.m; sourceTree = "<group>"; };
+		1935FF151BA83F8B00B83ECB /* ResizableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizableTableViewCell.h; sourceTree = "<group>"; };
+		1935FF161BA83F8B00B83ECB /* ResizableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizableTableViewCell.m; sourceTree = "<group>"; };
+		1935FF171BA83F8B00B83ECB /* ResizableTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResizableTableViewCell.xib; sourceTree = "<group>"; };
 		19466CD61B73467F00143B8C /* ScrollVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollVC.h; sourceTree = "<group>"; };
 		19466CD71B73467F00143B8C /* ScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollVC.m; sourceTree = "<group>"; };
 		19466CDA1B7495F800143B8C /* Level1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level1VC.h; sourceTree = "<group>"; };
@@ -139,6 +150,11 @@
 		19BDDB0B1B79FC1D00DD3880 /* PickSaveLoadImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickSaveLoadImageViewController.m; sourceTree = "<group>"; };
 		19BDDB0E1B7A7D3D00DD3880 /* ImageAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAnimationVC.h; sourceTree = "<group>"; };
 		19BDDB0F1B7A7D3D00DD3880 /* ImageAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAnimationVC.m; sourceTree = "<group>"; };
+		19CDAFF91BA96D000062F581 /* AutoResizableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoResizableTableViewController.h; sourceTree = "<group>"; };
+		19CDAFFA1BA96D000062F581 /* AutoResizableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoResizableTableViewController.m; sourceTree = "<group>"; };
+		19CDAFFC1BA96D4D0062F581 /* AutoResizableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoResizableTableViewCell.h; sourceTree = "<group>"; };
+		19CDAFFD1BA96D4D0062F581 /* AutoResizableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoResizableTableViewCell.m; sourceTree = "<group>"; };
+		19CDAFFE1BA96D4D0062F581 /* AutoResizableTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoResizableTableViewCell.xib; sourceTree = "<group>"; };
 		D39BD12B47C6AC6541981139 /* libPods-TestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9DC89D0997208064A633051 /* Pods-TestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestProject/Pods-TestProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +187,23 @@
 				F9DC89D0997208064A633051 /* Pods-TestProject.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		1935FF111BA83ED200B83ECB /* ResizableTableCells */ = {
+			isa = PBXGroup;
+			children = (
+				1935FF121BA83EF800B83ECB /* ResizableTableViewController.h */,
+				1935FF131BA83EF800B83ECB /* ResizableTableViewController.m */,
+				1935FF151BA83F8B00B83ECB /* ResizableTableViewCell.h */,
+				1935FF161BA83F8B00B83ECB /* ResizableTableViewCell.m */,
+				1935FF171BA83F8B00B83ECB /* ResizableTableViewCell.xib */,
+				19CDAFF91BA96D000062F581 /* AutoResizableTableViewController.h */,
+				19CDAFFA1BA96D000062F581 /* AutoResizableTableViewController.m */,
+				19CDAFFC1BA96D4D0062F581 /* AutoResizableTableViewCell.h */,
+				19CDAFFD1BA96D4D0062F581 /* AutoResizableTableViewCell.m */,
+				19CDAFFE1BA96D4D0062F581 /* AutoResizableTableViewCell.xib */,
+			);
+			name = ResizableTableCells;
 			sourceTree = "<group>";
 		};
 		19466CD51B73466500143B8C /* Scrolling */ = {
@@ -233,6 +266,7 @@
 		198983601B6A0C060049C409 /* TestProject */ = {
 			isa = PBXGroup;
 			children = (
+				1935FF111BA83ED200B83ECB /* ResizableTableCells */,
 				195C57141B8710C60059D335 /* Autocomplete Search */,
 				19BDDB0D1B7A7D2000DD3880 /* ImageAnimation */,
 				19BDDB091B79FBF100DD3880 /* Pick save and load image */,
@@ -498,12 +532,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				198983A81B6A18660049C409 /* SK-bgRed.png in Resources */,
+				19CDB0001BA96D4D0062F581 /* AutoResizableTableViewCell.xib in Resources */,
 				198983A41B6A18660049C409 /* SK-bgBlue.png in Resources */,
 				198983921B6A125C0049C409 /* PopoverViewController.xib in Resources */,
 				1989836D1B6A0C060049C409 /* Main.storyboard in Resources */,
 				198983A91B6A18660049C409 /* SK-bgRed@2x.png in Resources */,
 				198983A71B6A18660049C409 /* SK-bgGreen@2x.png in Resources */,
 				198983721B6A0C060049C409 /* LaunchScreen.xib in Resources */,
+				1935FF191BA83F8B00B83ECB /* ResizableTableViewCell.xib in Resources */,
 				198983A51B6A18660049C409 /* SK-bgBlue@2x.png in Resources */,
 				198983981B6A14D80049C409 /* PopoverCell.xib in Resources */,
 				198983A61B6A18660049C409 /* SK-bgGreen.png in Resources */,
@@ -577,14 +613,18 @@
 				198983B51B6A1C7F0049C409 /* FPPopoverView.m in Sources */,
 				198983671B6A0C060049C409 /* AppDelegate.m in Sources */,
 				198983CD1B6A36E20049C409 /* CMPopTipView.m in Sources */,
+				1935FF181BA83F8B00B83ECB /* ResizableTableViewCell.m in Sources */,
 				19B26FC61B9341FD005E9730 /* ImageDataRequester.m in Sources */,
 				198983961B6A13B60049C409 /* UIPopoverController+iPhone.m in Sources */,
 				19BDDB101B7A7D3D00DD3880 /* ImageAnimationVC.m in Sources */,
 				198983C31B6A21930049C409 /* WYStoryboardPopoverSegue.m in Sources */,
+				19CDAFFB1BA96D000062F581 /* AutoResizableTableViewController.m in Sources */,
 				195C57171B8710E50059D335 /* SearchVC.m in Sources */,
 				198983891B6A0CA60049C409 /* PopupsVC.m in Sources */,
 				198983911B6A125C0049C409 /* PopoverViewController.m in Sources */,
 				19BDDB0C1B79FC1D00DD3880 /* PickSaveLoadImageViewController.m in Sources */,
+				1935FF141BA83EF800B83ECB /* ResizableTableViewController.m in Sources */,
+				19CDAFFF1BA96D4D0062F581 /* AutoResizableTableViewCell.m in Sources */,
 				19466CD81B73467F00143B8C /* ScrollVC.m in Sources */,
 				198983641B6A0C060049C409 /* main.m in Sources */,
 			);

@@ -10,4 +10,6 @@
 
 @interface PopupsVC : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *btnWithGradient;
+
 @end
