@@ -17,6 +17,7 @@ typedef enum {
     VCSearch,
     VCImageUpload,
     VCResizableCells,
+    VCLoadingAnimation,
     VCTypesCount
 } VCType;
 
@@ -75,14 +76,15 @@ typedef enum {
 
 -(NSString *)getStringFromVCType:(NSInteger)vcType {
     switch (vcType) {
-        case VCPopup : return @"VCPopup";
-        case VCScroll : return @"VCScroll";
-        case VCSegues: return @"VCSegues";
-        case VCPickSaveLoad : return @"PickSaveLoadImage";
-        case VCImageAnimation : return @"VCImageAnimation";
-        case VCSearch : return @"VCAutocompleteSearch";
-        case VCImageUpload : return @"VCImageUpload";
-        case VCResizableCells : return @"VCResizableCells";
+        case VCPopup : return @"Popup Styles";
+        case VCScroll : return @"Scroll Views";
+        case VCSegues: return @"Segues";
+        case VCPickSaveLoad : return @"Image Pick Load Save";
+        case VCImageAnimation : return @"Image Animation";
+        case VCSearch : return @"Search With Autocomplete";
+        case VCImageUpload : return @"Image Upload";
+        case VCResizableCells : return @"Table With Resizable Cells";
+        case VCLoadingAnimation : return @"Custom Loading Animation";
         default: return @"VCEmpty";
     }
 }
@@ -97,6 +99,7 @@ typedef enum {
         case VCSearch : return @"goToVCSearch";
         case VCImageUpload : return @"goToImageUpload";
         case VCResizableCells : return @"goToResizableCells";
+        case VCLoadingAnimation : return @"goToLoadingAnimation";
         default: return @"goToVCEmpty";
     }
 }

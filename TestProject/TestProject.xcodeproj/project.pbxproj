@@ -51,6 +51,8 @@
 		198983D91B6A4EA40049C409 /* CustomPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 198983D81B6A4EA40049C409 /* CustomPopView.xib */; };
 		19B26FC21B9341D5005E9730 /* ImageUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B26FC11B9341D5005E9730 /* ImageUploadVC.m */; };
 		19B26FC61B9341FD005E9730 /* ImageDataRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B26FC51B9341FD005E9730 /* ImageDataRequester.m */; };
+		19B61C8D1BAACB8600FAB403 /* LoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B61C8C1BAACB8600FAB403 /* LoadingImageView.m */; };
+		19B61C901BAACBAF00FAB403 /* LoadingAnimcationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B61C8F1BAACBAF00FAB403 /* LoadingAnimcationVC.m */; };
 		19BDDB0C1B79FC1D00DD3880 /* PickSaveLoadImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDDB0B1B79FC1D00DD3880 /* PickSaveLoadImageViewController.m */; };
 		19BDDB101B7A7D3D00DD3880 /* ImageAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDDB0F1B7A7D3D00DD3880 /* ImageAnimationVC.m */; };
 		19CDAFFB1BA96D000062F581 /* AutoResizableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CDAFFA1BA96D000062F581 /* AutoResizableTableViewController.m */; };
@@ -146,6 +148,10 @@
 		19B26FC11B9341D5005E9730 /* ImageUploadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUploadVC.m; sourceTree = "<group>"; };
 		19B26FC41B9341FD005E9730 /* ImageDataRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDataRequester.h; sourceTree = "<group>"; };
 		19B26FC51B9341FD005E9730 /* ImageDataRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDataRequester.m; sourceTree = "<group>"; };
+		19B61C8B1BAACB8600FAB403 /* LoadingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingImageView.h; sourceTree = "<group>"; };
+		19B61C8C1BAACB8600FAB403 /* LoadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingImageView.m; sourceTree = "<group>"; };
+		19B61C8E1BAACBAF00FAB403 /* LoadingAnimcationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingAnimcationVC.h; sourceTree = "<group>"; };
+		19B61C8F1BAACBAF00FAB403 /* LoadingAnimcationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingAnimcationVC.m; sourceTree = "<group>"; };
 		19BDDB0A1B79FC1D00DD3880 /* PickSaveLoadImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickSaveLoadImageViewController.h; sourceTree = "<group>"; };
 		19BDDB0B1B79FC1D00DD3880 /* PickSaveLoadImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickSaveLoadImageViewController.m; sourceTree = "<group>"; };
 		19BDDB0E1B7A7D3D00DD3880 /* ImageAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAnimationVC.h; sourceTree = "<group>"; };
@@ -266,6 +272,7 @@
 		198983601B6A0C060049C409 /* TestProject */ = {
 			isa = PBXGroup;
 			children = (
+				19B61C8A1BAACB6C00FAB403 /* LoadingAnimation */,
 				1935FF111BA83ED200B83ECB /* ResizableTableCells */,
 				195C57141B8710C60059D335 /* Autocomplete Search */,
 				19BDDB0D1B7A7D2000DD3880 /* ImageAnimation */,
@@ -421,6 +428,17 @@
 				19B26FC51B9341FD005E9730 /* ImageDataRequester.m */,
 			);
 			name = ImageUpload;
+			sourceTree = "<group>";
+		};
+		19B61C8A1BAACB6C00FAB403 /* LoadingAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				19B61C8B1BAACB8600FAB403 /* LoadingImageView.h */,
+				19B61C8C1BAACB8600FAB403 /* LoadingImageView.m */,
+				19B61C8E1BAACBAF00FAB403 /* LoadingAnimcationVC.h */,
+				19B61C8F1BAACBAF00FAB403 /* LoadingAnimcationVC.m */,
+			);
+			name = LoadingAnimation;
 			sourceTree = "<group>";
 		};
 		19BDDB091B79FBF100DD3880 /* Pick save and load image */ = {
@@ -599,12 +617,14 @@
 				19466CE21B74980200143B8C /* OKVC.m in Sources */,
 				198983D71B6A4E950049C409 /* CustomPopView.m in Sources */,
 				198983C21B6A21930049C409 /* WYPopoverController.m in Sources */,
+				19B61C901BAACBAF00FAB403 /* LoadingAnimcationVC.m in Sources */,
 				198983B41B6A1C7F0049C409 /* FPPopoverController.m in Sources */,
 				198983B61B6A1C7F0049C409 /* FPTouchView.m in Sources */,
 				198983BA1B6A1ED50049C409 /* TestFPViewController.m in Sources */,
 				19466CDC1B7495F800143B8C /* Level1VC.m in Sources */,
 				19B26FC21B9341D5005E9730 /* ImageUploadVC.m in Sources */,
 				1989838D1B6A0CCB0049C409 /* MainTableViewController.m in Sources */,
+				19B61C8D1BAACB8600FAB403 /* LoadingImageView.m in Sources */,
 				19466CDF1B74975800143B8C /* Level2VC.m in Sources */,
 				195C571C1B8719AB0059D335 /* Candy.m in Sources */,
 				195C57221B8743A00059D335 /* CustonSearchController.m in Sources */,

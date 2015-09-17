@@ -52,6 +52,7 @@
                         <segue destination="ujq-c3-0y9" kind="show" identifier="goToVCSearch" id="Sst-Tk-Got"/>
                         <segue destination="xcF-bL-BRy" kind="show" identifier="goToImageUpload" id="w54-mA-4K4"/>
                         <segue destination="7PS-q0-VOh" kind="show" identifier="goToResizableCells" id="LvO-Dp-jPF"/>
+                        <segue destination="jcG-1T-20B" kind="show" identifier="goToLoadingAnimation" id="Ndd-kx-HIJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ng0-gI-PKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -98,6 +99,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wh1-05-PjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2016" y="509"/>
+        </scene>
+        <!--LOADING ANIMATION-->
+        <scene sceneID="ViW-Q0-F1v">
+            <objects>
+                <viewController id="jcG-1T-20B" customClass="LoadingAnimcationVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pqV-BZ-hlg"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ue-QQ-SVd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bUR-wD-6Ol">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpy-cn-eRt">
+                                <rect key="frame" x="94" y="72" width="133" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="aLT-Fr-Rz7"/>
+                                    <constraint firstAttribute="height" constant="48" id="wuW-Iy-VIX"/>
+                                </constraints>
+                                <state key="normal" title="START ANIMATION">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStartAnimation:" destination="jcG-1T-20B" eventType="touchUpInside" id="sGu-sp-0vu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bam-6M-MD5">
+                                <rect key="frame" x="94" y="128" width="133" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="gVI-Tx-ZbJ"/>
+                                    <constraint firstAttribute="width" constant="133" id="qYR-71-Szd"/>
+                                </constraints>
+                                <state key="normal" title="STOP ANIMATION">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStopAnimation:" destination="jcG-1T-20B" eventType="touchUpInside" id="9P3-7T-p2v"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avengers" translatesAutoresizingMaskIntoConstraints="NO" id="6Zr-a4-F5T" customClass="LoadingImageView">
+                                <rect key="frame" x="40" y="184" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="BOk-UY-8yU"/>
+                                    <constraint firstAttribute="height" constant="240" id="xO9-Qk-9Y8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Bam-6M-MD5" secondAttribute="centerX" constant="-0.5" id="8TV-Ok-5no"/>
+                            <constraint firstItem="6Zr-a4-F5T" firstAttribute="top" secondItem="Bam-6M-MD5" secondAttribute="bottom" constant="8" id="9hk-nk-d6T"/>
+                            <constraint firstAttribute="centerX" secondItem="6Zr-a4-F5T" secondAttribute="centerX" id="PIx-13-Jx3"/>
+                            <constraint firstItem="Bam-6M-MD5" firstAttribute="top" secondItem="bpy-cn-eRt" secondAttribute="bottom" constant="8" id="hKc-9O-rH2"/>
+                            <constraint firstItem="bpy-cn-eRt" firstAttribute="top" secondItem="pqV-BZ-hlg" secondAttribute="bottom" constant="8" id="ks6-g2-Kao"/>
+                            <constraint firstAttribute="centerX" secondItem="bpy-cn-eRt" secondAttribute="centerX" constant="-0.5" id="w2w-wQ-In0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="LOADING ANIMATION" id="OmU-zj-gdn"/>
+                    <connections>
+                        <outlet property="ivLoading" destination="6Zr-a4-F5T" id="vwB-ME-5eH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H6A-74-7hD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="1409"/>
         </scene>
         <!--LEVEL 1-->
         <scene sceneID="vcQ-h5-NjS">
