@@ -26,6 +26,9 @@
 // Custom Library CMPopTipView
 #import "CMPopTipView.h"
 
+// Custom Popup
+#import "CustomAlert.h"
+
 @interface PopupsVC () <FPPopoverControllerDelegate, CMPopTipViewDelegate> {
     SKTipAlertView *customAlertView1;
     BOOL isCMPopViewDisplayed;
@@ -277,6 +280,30 @@
 permittedArrowDirections:UIPopoverArrowDirectionDown
                                 animated:YES];
 }
+
+- (IBAction)onShowCustomPopup:(id)sender {
+    static int counter = 0;
+    if (counter % 3 == 0) {
+        [CustomAlert showAlerWithType:ErrorAlert
+                             position:PositionTop
+                                 text:@" Network Error. Check your connection. ection. Network Error. Check your connection.Network Error. Check your connection. Network Error. Check your connection.Network Error. Check your connection. Network Error. Check your connection. END!"
+                             duration:2.0];
+    } else if (counter % 3 == 1) {
+        [CustomAlert showAlerWithType:ErrorAlert
+                             position:PositionTop
+                                 text:@" Network Error. Check your connection."
+                             duration:2.0];
+    } else {
+        [CustomAlert showAlerWithType:InfoAlert
+                             position:PositionBottom
+                                 text:@" Network Error. Check your connection. Network Error. Check your connection. fds fsdf sdfsdfsd END!"
+                             duration:2.0];
+
+    }
+    
+    counter ++;
+}
+
 
 /*
 #pragma mark - Navigation
