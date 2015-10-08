@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Hello user"; ObjectID = "SqU-QR-jTr"; */
+"SqU-QR-jTr.text" = "Hallo user";
+
+/* Class = "UILabel"; text = "Yes i do"; ObjectID = "X60-EV-2ig"; */
+"X60-EV-2ig.text" = "Yes i do";
+
+/* Class = "UIButton"; normalTitle = "Do you like it?"; ObjectID = "YmS-m3-xcA"; */
+"YmS-m3-xcA.normalTitle" = "Do you like it?";

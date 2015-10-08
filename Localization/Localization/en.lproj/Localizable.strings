@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Localization
+
+  Created by Radi on 10/8/15.
+  Copyright © 2015 archangel. All rights reserved.
+*/
+
+"greeting" = "Hi, %@";
+"question" = "Do you like it?";
+"answer" = "Yes i do like it";

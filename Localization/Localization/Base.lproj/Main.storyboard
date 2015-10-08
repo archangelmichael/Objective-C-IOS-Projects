@@ -33,7 +33,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I do like it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X60-EV-2ig">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes i do" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X60-EV-2ig">
                                 <rect key="frame" x="16" y="187" width="288" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="pCs-SV-lnY"/>
@@ -42,6 +42,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nP1-is-Gsj">
+                                <rect key="frame" x="12" y="267" width="296" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="SSk-27-4A7"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmS-m3-xcA">
                                 <rect key="frame" x="16" y="100" width="288" height="79"/>
                                 <constraints>
@@ -62,6 +68,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nP1-is-Gsj" firstAttribute="top" secondItem="X60-EV-2ig" secondAttribute="bottom" constant="8" id="4kN-ex-MW8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X60-EV-2ig" secondAttribute="trailing" id="5Er-eN-shT"/>
                             <constraint firstItem="SqU-QR-jTr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F5o-uD-6N9"/>
                             <constraint firstAttribute="leadingMargin" secondItem="YmS-m3-xcA" secondAttribute="leading" id="M9V-DL-00T"/>
@@ -69,15 +76,18 @@
                             <constraint firstAttribute="leadingMargin" secondItem="X60-EV-2ig" secondAttribute="leading" id="MZ0-0u-vif"/>
                             <constraint firstItem="YmS-m3-xcA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ntv-UE-Z2j"/>
                             <constraint firstItem="YmS-m3-xcA" firstAttribute="top" secondItem="SqU-QR-jTr" secondAttribute="bottom" constant="8" id="Wxc-hY-lFw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nP1-is-Gsj" secondAttribute="trailing" constant="-4" id="Zve-fk-Ynu"/>
                             <constraint firstItem="X60-EV-2ig" firstAttribute="top" secondItem="YmS-m3-xcA" secondAttribute="bottom" constant="8" id="fVV-hY-Sbr"/>
                             <constraint firstItem="SqU-QR-jTr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iB4-2k-4N0"/>
                             <constraint firstAttribute="leadingMargin" secondItem="SqU-QR-jTr" secondAttribute="leading" id="qAi-FM-7br"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SqU-QR-jTr" secondAttribute="trailing" id="wwm-3k-Zbq"/>
+                            <constraint firstItem="nP1-is-Gsj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="yYZ-f5-cSm"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="buttonAsk" destination="YmS-m3-xcA" id="R5W-Sk-7ZB"/>
+                        <outlet property="ivGreeting" destination="nP1-is-Gsj" id="fxN-Rs-R21"/>
                         <outlet property="labelAnswer" destination="X60-EV-2ig" id="oE0-Fn-qHJ"/>
                         <outlet property="labelHi" destination="SqU-QR-jTr" id="y2J-3e-tRN"/>
                     </connections>
