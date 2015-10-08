@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7BBE9A16-6A28-4D0B-A5E2-EBBFB46C249A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E4148FE39152E2D7B9B1E7992BC38224B312142C</key>
+		<string>https://github.com/archangelmichael/PersonalRepos</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HKTutorial/HKTutorial.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E4148FE39152E2D7B9B1E7992BC38224B312142C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/archangelmichael/PersonalRepos</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E4148FE39152E2D7B9B1E7992BC38224B312142C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E4148FE39152E2D7B9B1E7992BC38224B312142C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PrivateRepos</string>
+		</dict>
+	</array>
+</dict>
+</plist>

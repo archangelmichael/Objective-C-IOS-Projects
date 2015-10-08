@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DefaultVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="IaV-15-oPb" id="cdd-B3-8KH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default VC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjL-mm-pzU">
+                    <rect key="frame" x="103" y="269" width="115" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-15-oPb">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jjL-mm-pzU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Axd-Um-g1P"/>
+                <constraint firstAttribute="trailing" secondItem="IaV-15-oPb" secondAttribute="trailing" id="IGL-4K-yqN"/>
+                <constraint firstItem="IaV-15-oPb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wbm-U8-pZc"/>
+                <constraint firstItem="IaV-15-oPb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bdg-nV-kox"/>
+                <constraint firstAttribute="bottom" secondItem="IaV-15-oPb" secondAttribute="bottom" id="tGe-Dn-lOU"/>
+                <constraint firstItem="jjL-mm-pzU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="yHA-5d-imA"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="283" y="259"/>
+        </view>
+    </objects>
+</document>

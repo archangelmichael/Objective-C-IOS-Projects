@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>app_region</key>
+	<string>na</string>
+	<key>security_url</key>
+	<string>http://acc.mobility-ws.ucb.com/ok2update/oksecure.php</string>
+	<key>admin_url</key>
+	<string>http://acc.mobility-ws.ucb.com/ok2update/okadmin.php</string>
+	<key>ios_check_url</key>
+	<string>http://acc.mobility-ws.ucb.com/ok2update/</string>
+</dict>
+</plist>

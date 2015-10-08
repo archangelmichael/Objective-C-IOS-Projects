@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1985ADCB1B41878B00B92AEA /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1985ADCA1B41878B00B92AEA /* Constants.m */; };
+		19EBAC311B46FA6B00977F09 /* TBClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 19EBAC271B46FA6B00977F09 /* TBClusterAnnotation.m */; };
+		19EBAC321B46FA6B00977F09 /* TBClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19EBAC291B46FA6B00977F09 /* TBClusterAnnotationView.m */; };
+		19EBAC331B46FA6B00977F09 /* TBCoordinateQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 19EBAC2B1B46FA6B00977F09 /* TBCoordinateQuadTree.m */; };
+		19EBAC351B46FA6B00977F09 /* TBQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 19EBAC2F1B46FA6B00977F09 /* TBQuadTree.m */; };
+		19EBAC371B47287700977F09 /* Brussels.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 19EBAC361B47287700977F09 /* Brussels.gpx */; };
+		19F5971A1B32A084002EDD06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F597191B32A084002EDD06 /* main.m */; };
+		19F5971D1B32A084002EDD06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F5971C1B32A084002EDD06 /* AppDelegate.m */; };
+		19F597201B32A084002EDD06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F5971F1B32A084002EDD06 /* ViewController.m */; };
+		19F597231B32A084002EDD06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F597211B32A084002EDD06 /* Main.storyboard */; };
+		19F597251B32A084002EDD06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19F597241B32A084002EDD06 /* Images.xcassets */; };
+		19F597281B32A084002EDD06 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F597261B32A084002EDD06 /* LaunchScreen.xib */; };
+		19F597341B32A084002EDD06 /* Clustering_DotsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F597331B32A084002EDD06 /* Clustering_DotsTests.m */; };
+		19F5973E1B32A594002EDD06 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F5973D1B32A594002EDD06 /* CoreLocation.framework */; };
+		19F597401B32A5A0002EDD06 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F5973F1B32A5A0002EDD06 /* MapKit.framework */; };
+		19F597431B32AFED002EDD06 /* Dot.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F597421B32AFED002EDD06 /* Dot.m */; };
+		19F597461B32B190002EDD06 /* FilterData.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F597451B32B190002EDD06 /* FilterData.m */; };
+		A8E4E59AE97CCB0796AAF302 /* libPods-Clustering Dots.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AE5B03D2CAAB4D7414883C /* libPods-Clustering Dots.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19F5972E1B32A084002EDD06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19F5970C1B32A084002EDD06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19F597131B32A084002EDD06;
+			remoteInfo = "Clustering Dots";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05AE5B03D2CAAB4D7414883C /* libPods-Clustering Dots.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Clustering Dots.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1985ADC91B41878B00B92AEA /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		1985ADCA1B41878B00B92AEA /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		19EBAC261B46FA6B00977F09 /* TBClusterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBClusterAnnotation.h; sourceTree = "<group>"; };
+		19EBAC271B46FA6B00977F09 /* TBClusterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBClusterAnnotation.m; sourceTree = "<group>"; };
+		19EBAC281B46FA6B00977F09 /* TBClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBClusterAnnotationView.h; sourceTree = "<group>"; };
+		19EBAC291B46FA6B00977F09 /* TBClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBClusterAnnotationView.m; sourceTree = "<group>"; };
+		19EBAC2A1B46FA6B00977F09 /* TBCoordinateQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCoordinateQuadTree.h; sourceTree = "<group>"; };
+		19EBAC2B1B46FA6B00977F09 /* TBCoordinateQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCoordinateQuadTree.m; sourceTree = "<group>"; };
+		19EBAC2E1B46FA6B00977F09 /* TBQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBQuadTree.h; sourceTree = "<group>"; };
+		19EBAC2F1B46FA6B00977F09 /* TBQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBQuadTree.m; sourceTree = "<group>"; };
+		19EBAC361B47287700977F09 /* Brussels.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Brussels.gpx; sourceTree = "<group>"; };
+		19F597141B32A084002EDD06 /* Clustering Dots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clustering Dots.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19F597181B32A084002EDD06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19F597191B32A084002EDD06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		19F5971B1B32A084002EDD06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		19F5971C1B32A084002EDD06 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		19F5971E1B32A084002EDD06 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		19F5971F1B32A084002EDD06 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		19F597221B32A084002EDD06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19F597241B32A084002EDD06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		19F597271B32A084002EDD06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		19F5972D1B32A084002EDD06 /* Clustering DotsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clustering DotsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19F597321B32A084002EDD06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19F597331B32A084002EDD06 /* Clustering_DotsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Clustering_DotsTests.m; sourceTree = "<group>"; };
+		19F5973D1B32A594002EDD06 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		19F5973F1B32A5A0002EDD06 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		19F597411B32AFED002EDD06 /* Dot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dot.h; sourceTree = "<group>"; };
+		19F597421B32AFED002EDD06 /* Dot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dot.m; sourceTree = "<group>"; };
+		19F597441B32B190002EDD06 /* FilterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterData.h; sourceTree = "<group>"; };
+		19F597451B32B190002EDD06 /* FilterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterData.m; sourceTree = "<group>"; };
+		2577F0165C80C460086E969E /* Pods-Clustering Dots.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clustering Dots.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clustering Dots/Pods-Clustering Dots.release.xcconfig"; sourceTree = "<group>"; };
+		48A54F64B3135D60CC0B0412 /* Pods-Clustering Dots.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clustering Dots.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clustering Dots/Pods-Clustering Dots.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19F597111B32A084002EDD06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19F597401B32A5A0002EDD06 /* MapKit.framework in Frameworks */,
+				19F5973E1B32A594002EDD06 /* CoreLocation.framework in Frameworks */,
+				A8E4E59AE97CCB0796AAF302 /* libPods-Clustering Dots.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19F5972A1B32A084002EDD06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19EBAC201B46F8D300977F09 /* Clustering Tree */ = {
+			isa = PBXGroup;
+			children = (
+				19F597411B32AFED002EDD06 /* Dot.h */,
+				19F597421B32AFED002EDD06 /* Dot.m */,
+				19EBAC261B46FA6B00977F09 /* TBClusterAnnotation.h */,
+				19EBAC271B46FA6B00977F09 /* TBClusterAnnotation.m */,
+				19EBAC281B46FA6B00977F09 /* TBClusterAnnotationView.h */,
+				19EBAC291B46FA6B00977F09 /* TBClusterAnnotationView.m */,
+				19EBAC2A1B46FA6B00977F09 /* TBCoordinateQuadTree.h */,
+				19EBAC2B1B46FA6B00977F09 /* TBCoordinateQuadTree.m */,
+				19EBAC2E1B46FA6B00977F09 /* TBQuadTree.h */,
+				19EBAC2F1B46FA6B00977F09 /* TBQuadTree.m */,
+			);
+			name = "Clustering Tree";
+			sourceTree = "<group>";
+		};
+		19F5970B1B32A084002EDD06 = {
+			isa = PBXGroup;
+			children = (
+				19EBAC361B47287700977F09 /* Brussels.gpx */,
+				19F597161B32A084002EDD06 /* Clustering Dots */,
+				19F597301B32A084002EDD06 /* Clustering DotsTests */,
+				19F597151B32A084002EDD06 /* Products */,
+				223CF2412B946C2E516B30A4 /* Pods */,
+				1D87152EEE6D40424C6BAA64 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		19F597151B32A084002EDD06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19F597141B32A084002EDD06 /* Clustering Dots.app */,
+				19F5972D1B32A084002EDD06 /* Clustering DotsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19F597161B32A084002EDD06 /* Clustering Dots */ = {
+			isa = PBXGroup;
+			children = (
+				19EBAC201B46F8D300977F09 /* Clustering Tree */,
+				19F5971B1B32A084002EDD06 /* AppDelegate.h */,
+				19F5971C1B32A084002EDD06 /* AppDelegate.m */,
+				19F5971E1B32A084002EDD06 /* ViewController.h */,
+				19F5971F1B32A084002EDD06 /* ViewController.m */,
+				19F597211B32A084002EDD06 /* Main.storyboard */,
+				19F597241B32A084002EDD06 /* Images.xcassets */,
+				19F597261B32A084002EDD06 /* LaunchScreen.xib */,
+				19F597171B32A084002EDD06 /* Supporting Files */,
+				19F597441B32B190002EDD06 /* FilterData.h */,
+				19F597451B32B190002EDD06 /* FilterData.m */,
+				1985ADC91B41878B00B92AEA /* Constants.h */,
+				1985ADCA1B41878B00B92AEA /* Constants.m */,
+			);
+			path = "Clustering Dots";
+			sourceTree = "<group>";
+		};
+		19F597171B32A084002EDD06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				19F597181B32A084002EDD06 /* Info.plist */,
+				19F597191B32A084002EDD06 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19F597301B32A084002EDD06 /* Clustering DotsTests */ = {
+			isa = PBXGroup;
+			children = (
+				19F597331B32A084002EDD06 /* Clustering_DotsTests.m */,
+				19F597311B32A084002EDD06 /* Supporting Files */,
+			);
+			path = "Clustering DotsTests";
+			sourceTree = "<group>";
+		};
+		19F597311B32A084002EDD06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				19F597321B32A084002EDD06 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D87152EEE6D40424C6BAA64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19F5973F1B32A5A0002EDD06 /* MapKit.framework */,
+				05AE5B03D2CAAB4D7414883C /* libPods-Clustering Dots.a */,
+				19F5973D1B32A594002EDD06 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		223CF2412B946C2E516B30A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48A54F64B3135D60CC0B0412 /* Pods-Clustering Dots.debug.xcconfig */,
+				2577F0165C80C460086E969E /* Pods-Clustering Dots.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19F597131B32A084002EDD06 /* Clustering Dots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19F597371B32A084002EDD06 /* Build configuration list for PBXNativeTarget "Clustering Dots" */;
+			buildPhases = (
+				21C454B0748AE828741A71C2 /* Check Pods Manifest.lock */,
+				19F597101B32A084002EDD06 /* Sources */,
+				19F597111B32A084002EDD06 /* Frameworks */,
+				19F597121B32A084002EDD06 /* Resources */,
+				818B452CBC98A8A256C4EEDE /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Clustering Dots";
+			productName = "Clustering Dots";
+			productReference = 19F597141B32A084002EDD06 /* Clustering Dots.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19F5972C1B32A084002EDD06 /* Clustering DotsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19F5973A1B32A084002EDD06 /* Build configuration list for PBXNativeTarget "Clustering DotsTests" */;
+			buildPhases = (
+				19F597291B32A084002EDD06 /* Sources */,
+				19F5972A1B32A084002EDD06 /* Frameworks */,
+				19F5972B1B32A084002EDD06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19F5972F1B32A084002EDD06 /* PBXTargetDependency */,
+			);
+			name = "Clustering DotsTests";
+			productName = "Clustering DotsTests";
+			productReference = 19F5972D1B32A084002EDD06 /* Clustering DotsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19F5970C1B32A084002EDD06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = archangel;
+				TargetAttributes = {
+					19F597131B32A084002EDD06 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					19F5972C1B32A084002EDD06 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 19F597131B32A084002EDD06;
+					};
+				};
+			};
+			buildConfigurationList = 19F5970F1B32A084002EDD06 /* Build configuration list for PBXProject "Clustering Dots" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19F5970B1B32A084002EDD06;
+			productRefGroup = 19F597151B32A084002EDD06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19F597131B32A084002EDD06 /* Clustering Dots */,
+				19F5972C1B32A084002EDD06 /* Clustering DotsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19F597121B32A084002EDD06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19EBAC371B47287700977F09 /* Brussels.gpx in Resources */,
+				19F597231B32A084002EDD06 /* Main.storyboard in Resources */,
+				19F597281B32A084002EDD06 /* LaunchScreen.xib in Resources */,
+				19F597251B32A084002EDD06 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19F5972B1B32A084002EDD06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21C454B0748AE828741A71C2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		818B452CBC98A8A256C4EEDE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Clustering Dots/Pods-Clustering Dots-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19F597101B32A084002EDD06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19F597201B32A084002EDD06 /* ViewController.m in Sources */,
+				19EBAC331B46FA6B00977F09 /* TBCoordinateQuadTree.m in Sources */,
+				19F597461B32B190002EDD06 /* FilterData.m in Sources */,
+				19EBAC311B46FA6B00977F09 /* TBClusterAnnotation.m in Sources */,
+				1985ADCB1B41878B00B92AEA /* Constants.m in Sources */,
+				19EBAC351B46FA6B00977F09 /* TBQuadTree.m in Sources */,
+				19F5971D1B32A084002EDD06 /* AppDelegate.m in Sources */,
+				19F5971A1B32A084002EDD06 /* main.m in Sources */,
+				19EBAC321B46FA6B00977F09 /* TBClusterAnnotationView.m in Sources */,
+				19F597431B32AFED002EDD06 /* Dot.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19F597291B32A084002EDD06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19F597341B32A084002EDD06 /* Clustering_DotsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19F5972F1B32A084002EDD06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19F597131B32A084002EDD06 /* Clustering Dots */;
+			targetProxy = 19F5972E1B32A084002EDD06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		19F597211B32A084002EDD06 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19F597221B32A084002EDD06 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19F597261B32A084002EDD06 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19F597271B32A084002EDD06 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19F597351B32A084002EDD06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		19F597361B32A084002EDD06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19F597381B32A084002EDD06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48A54F64B3135D60CC0B0412 /* Pods-Clustering Dots.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Clustering Dots/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		19F597391B32A084002EDD06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2577F0165C80C460086E969E /* Pods-Clustering Dots.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Clustering Dots/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		19F5973B1B32A084002EDD06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Clustering DotsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clustering Dots.app/Clustering Dots";
+			};
+			name = Debug;
+		};
+		19F5973C1B32A084002EDD06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Clustering DotsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clustering Dots.app/Clustering Dots";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19F5970F1B32A084002EDD06 /* Build configuration list for PBXProject "Clustering Dots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19F597351B32A084002EDD06 /* Debug */,
+				19F597361B32A084002EDD06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19F597371B32A084002EDD06 /* Build configuration list for PBXNativeTarget "Clustering Dots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19F597381B32A084002EDD06 /* Debug */,
+				19F597391B32A084002EDD06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19F5973A1B32A084002EDD06 /* Build configuration list for PBXNativeTarget "Clustering DotsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19F5973B1B32A084002EDD06 /* Debug */,
+				19F5973C1B32A084002EDD06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19F5970C1B32A084002EDD06 /* Project object */;
+}

@@ -1,0 +1,48 @@
+AS STATIC LIBRARY FOR IOS 7
+
+1. Copy "Airship" & "AirshipKit" dirs to project dir
+2. Project Settings/ Build Settings  => Search Paths
+	"Header Search Paths" = "../Airship/**"
+3. Project Settings/ Build Settings  => Linking
+	"Other Linker Flags" = "-ObjC -lz -lsqlite3"
+4. Project Settings/ Build Phases  => Link Binary With Libraries
+	ADD:
+	 libUAirship.a
+5. Enable background push
+	In Info.plist
+	ADD:
+	 UIBackgroundModes = remote-notification
+	DISPLAYS AS:
+	 Required background modes = App downloads content in response to push notifications
+ 6. Project Settings/ Capabilities
+ 	ADD:
+ 		Remote notifications
+ 7. Project Settings/ Build Phases  => Link Binary With Libraries
+ 	ADD:
+ 		libsqlite3
+ 		libz
+ 8. Create AirshipConfig.plist:
+ 	 <key>inProduction</key>
+ 	 <false/>
+ 	 <key>developmentAppKey</key>
+ 	 <string>Your Development App Key</string>
+ 	 <key>developmentAppSecret</key>
+ 	 <string>Your Development App Secret</string>
+ 	 <key>productionAppKey</key>
+ 	 <string>Your Production App Key</string>
+ 	 <key>productionAppSecret</key>
+ 	 <string>Your Production App Secret</string>
+ 9. IMPORT HEADERS:
+ 	#import "UAirship.h"
+	#import "UAConfig.h"
+	#import "UAPush.h"
+10. Start services:
+	UAConfig *config = [UAConfig defaultConfig];
+	[UAirship takeOff:config];
+11. Enable User Notifications:
+	[UAirship push].userNotificationTypes = (UIUserNotificationTypeAlert |
+                                         UIUserNotificationTypeBadge |
+                                         UIUserNotificationTypeSound);
+    [UAirship push].userPushNotificationsEnabled = YES;
+12. Project Settings/ Build Settings
+	“Enable Bitcode” = “NO”
