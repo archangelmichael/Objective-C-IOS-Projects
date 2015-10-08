@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello user" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqU-QR-jTr">
+                                <rect key="frame" x="16" y="20" width="288" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="PNO-NJ-CgT"/>
+                                    <constraint firstAttribute="height" constant="72" id="oQS-Ts-B3S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PNO-NJ-CgT"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I do like it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X60-EV-2ig">
+                                <rect key="frame" x="16" y="187" width="288" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="pCs-SV-lnY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmS-m3-xcA">
+                                <rect key="frame" x="16" y="100" width="288" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Bnn-y5-ts3"/>
+                                    <constraint firstAttribute="height" constant="79" id="Ny4-Iu-9Vo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Do you like it?"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bnn-y5-ts3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onAsk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GIS-73-ZFd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="X60-EV-2ig" secondAttribute="trailing" id="5Er-eN-shT"/>
+                            <constraint firstItem="SqU-QR-jTr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F5o-uD-6N9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="YmS-m3-xcA" secondAttribute="leading" id="M9V-DL-00T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YmS-m3-xcA" secondAttribute="trailing" id="MWE-OC-6Od"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="X60-EV-2ig" secondAttribute="leading" id="MZ0-0u-vif"/>
+                            <constraint firstItem="YmS-m3-xcA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ntv-UE-Z2j"/>
+                            <constraint firstItem="YmS-m3-xcA" firstAttribute="top" secondItem="SqU-QR-jTr" secondAttribute="bottom" constant="8" id="Wxc-hY-lFw"/>
+                            <constraint firstItem="X60-EV-2ig" firstAttribute="top" secondItem="YmS-m3-xcA" secondAttribute="bottom" constant="8" id="fVV-hY-Sbr"/>
+                            <constraint firstItem="SqU-QR-jTr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iB4-2k-4N0"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="SqU-QR-jTr" secondAttribute="leading" id="qAi-FM-7br"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SqU-QR-jTr" secondAttribute="trailing" id="wwm-3k-Zbq"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="buttonAsk" destination="YmS-m3-xcA" id="R5W-Sk-7ZB"/>
+                        <outlet property="labelAnswer" destination="X60-EV-2ig" id="oE0-Fn-qHJ"/>
+                        <outlet property="labelHi" destination="SqU-QR-jTr" id="y2J-3e-tRN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="291"/>
+        </scene>
+    </scenes>
+</document>
