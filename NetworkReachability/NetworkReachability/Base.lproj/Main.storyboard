@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWA-fq-vuw">
+                                <rect key="frame" x="169" y="280" width="263" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Check Internet Connection"/>
+                                <connections>
+                                    <action selector="onCheckConnection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5s-bf-JRF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqM-cw-p1g">
+                                <rect key="frame" x="300" y="200" width="0.0" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="u0h-r8-aLb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LWA-fq-vuw" firstAttribute="top" secondItem="fqM-cw-p1g" secondAttribute="bottom" constant="8" id="SQk-LG-1Lj"/>
+                            <constraint firstItem="LWA-fq-vuw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XgC-c5-sby"/>
+                            <constraint firstItem="fqM-cw-p1g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="miP-MI-Ke6"/>
+                            <constraint firstItem="LWA-fq-vuw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wqJ-si-PI0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="LWA-fq-vuw" id="1ub-Tw-9hY"/>
+                        <outlet property="label" destination="fqM-cw-p1g" id="vhH-4Z-93S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="245"/>
+        </scene>
+    </scenes>
+</document>
