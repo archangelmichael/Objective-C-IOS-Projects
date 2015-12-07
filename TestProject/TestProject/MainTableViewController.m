@@ -18,6 +18,7 @@ typedef enum {
     VCImageUpload,
     VCResizableCells,
     VCLoadingAnimation,
+    VCTest,
     VCTypesCount
 } VCType;
 
@@ -85,6 +86,7 @@ typedef enum {
         case VCImageUpload : return @"Image Upload";
         case VCResizableCells : return @"Table With Resizable Cells";
         case VCLoadingAnimation : return @"Custom Loading Animation";
+        case VCTest : return @"Test IOS9 WebView";
         default: return @"VCEmpty";
     }
 }
@@ -100,6 +102,7 @@ typedef enum {
         case VCImageUpload : return @"goToImageUpload";
         case VCResizableCells : return @"goToResizableCells";
         case VCLoadingAnimation : return @"goToLoadingAnimation";
+        case VCTest : return @"goToVCEmpty";
         default: return @"goToVCEmpty";
     }
 }

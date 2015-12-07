@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eHD-jF-U6N">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -26,14 +25,14 @@
                                             <rect key="frame" x="15" y="14" width="31.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AYA-cH-xVn">
                                             <rect key="frame" x="15" y="33.5" width="40.5" height="13.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -965,10 +964,10 @@
             </objects>
             <point key="canvasLocation" x="-20" y="1000"/>
         </scene>
-        <!--View Controller-->
+        <!--Angular Web View iOS9 Test View Controller-->
         <scene sceneID="1R6-gc-Rbo">
             <objects>
-                <viewController id="GOy-C8-hlY" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="GOy-C8-hlY" customClass="AngularWebViewIOS9TestViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tvc-Fu-lXv"/>
                         <viewControllerLayoutGuide type="bottom" id="CC4-Lz-EMG"/>
@@ -976,10 +975,25 @@
                     <view key="view" contentMode="scaleToFill" id="ik3-6e-NAd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvh-IO-jiN">
+                                <rect key="frame" x="-8" y="64" width="336" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gvh-IO-jiN" firstAttribute="leading" secondItem="ik3-6e-NAd" secondAttribute="leadingMargin" constant="-24" id="Obp-HR-znb"/>
+                            <constraint firstItem="CC4-Lz-EMG" firstAttribute="top" secondItem="gvh-IO-jiN" secondAttribute="bottom" id="W8e-tS-tKd"/>
+                            <constraint firstItem="gvh-IO-jiN" firstAttribute="top" secondItem="Tvc-Fu-lXv" secondAttribute="bottom" id="lQy-Ut-pxM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gvh-IO-jiN" secondAttribute="trailing" constant="-24" id="ms7-h0-nvQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gL0-xk-8ia"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="gvh-IO-jiN" id="7VA-0M-ZBM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4QW-on-hMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
