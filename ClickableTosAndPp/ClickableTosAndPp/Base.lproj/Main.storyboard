@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzW-wP-M7M" userLabel="vContent">
+                                <rect key="frame" x="180" y="283" width="240" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGf-Ol-3r5" userLabel="btnClickable" customClass="AcceptButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                        <color key="backgroundColor" red="0.81176470590000005" green="0.0" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="PGf-Ol-3r5" secondAttribute="height" multiplier="1:1" id="SNy-Y6-GJW"/>
+                                        </constraints>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept tos and pp" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sHa-U5-Brh" userLabel="lblClickable" customClass="AcceptLabel">
+                                        <rect key="frame" x="36" y="0.0" width="204" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.65098039220000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="PGf-Ol-3r5" firstAttribute="top" secondItem="dzW-wP-M7M" secondAttribute="top" id="3fT-8c-efy"/>
+                                    <constraint firstAttribute="trailing" secondItem="PGf-Ol-3r5" secondAttribute="trailing" id="6db-Hd-bbX"/>
+                                    <constraint firstAttribute="width" constant="240" id="Cj4-Vb-dKK"/>
+                                    <constraint firstAttribute="bottom" secondItem="sHa-U5-Brh" secondAttribute="bottom" id="UK6-hD-ItR"/>
+                                    <constraint firstItem="sHa-U5-Brh" firstAttribute="leading" secondItem="PGf-Ol-3r5" secondAttribute="trailing" constant="2" id="VVH-pa-Ubw"/>
+                                    <constraint firstItem="sHa-U5-Brh" firstAttribute="top" secondItem="dzW-wP-M7M" secondAttribute="top" id="fRT-q0-cZl"/>
+                                    <constraint firstAttribute="trailing" secondItem="sHa-U5-Brh" secondAttribute="trailing" id="i8Y-Sp-HVh"/>
+                                    <constraint firstAttribute="bottom" secondItem="PGf-Ol-3r5" secondAttribute="bottom" id="xJ5-Xh-fiq"/>
+                                    <constraint firstItem="PGf-Ol-3r5" firstAttribute="leading" secondItem="dzW-wP-M7M" secondAttribute="leading" id="yJA-He-60f"/>
+                                    <constraint firstAttribute="height" constant="34" id="ykk-u3-Dy6"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6db-Hd-bbX"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dzW-wP-M7M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="515-qq-BKK"/>
+                            <constraint firstItem="dzW-wP-M7M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fw4-aM-d3B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAccept" destination="PGf-Ol-3r5" id="A1g-IF-9HG"/>
+                        <outlet property="lblAccept" destination="sHa-U5-Brh" id="e64-qq-pGU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="338"/>
+        </scene>
+    </scenes>
+</document>
