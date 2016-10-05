@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonAsk;
 @property (weak, nonatomic) IBOutlet UIImageView *ivGreeting;
 
+@property (weak, nonatomic) IBOutlet UILabel *lbl2;
+
 @end
 
 @implementation ViewController
