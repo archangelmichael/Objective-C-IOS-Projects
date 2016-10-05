@@ -49,13 +49,19 @@
 - (void)setCount:(NSUInteger)count
 {
     _count = count;
+    if (count == 1) {
+        self.countLabel.text = @"";
+    }
+    else {
+        self.countLabel.text = [@(count) stringValue];
+    }
     
-    self.countLabel.text = [@(count) stringValue];
     [self setNeedsLayout];
 }
 
 - (void)setFollowed:(BOOL)followed {
     _followed = followed;
+    _countLabel.textColor = followed ? [UIColor whiteColor] : [UIColor darkGrayColor];
     [self setNeedsLayout];
 }
 
@@ -70,7 +76,7 @@
     CGPoint centerOffset;
     CGRect countLabelFrame;
     if (self.isUnique) {
-        NSString *imageName = self.isFollowed ? @"followed" : @"not_followed";
+        NSString *imageName = self.isFollowed ? @"followed20" : @"unfollowed20";
         image = [UIImage imageNamed:imageName];
         centerOffset = CGPointMake(0, image.size.height * 0.5);
         CGRect frame = self.bounds;
@@ -79,35 +85,20 @@
     }
     else {
         NSString *suffix;
-        if (self.count > 1000) {
-            suffix = @"39";
+        if (self.count >= 1000) {
+            suffix = @"40";
         }
-        else if (self.count > 500) {
-            suffix = @"38";
+        else if (self.count >= 100) {
+            suffix = @"30";
         }
-        else if (self.count > 200) {
-            suffix = @"36";
-        }
-        else if (self.count > 100) {
-            suffix = @"34";
-        }
-        else if (self.count > 50) {
-            suffix = @"31";
-        }
-        else if (self.count > 20) {
-            suffix = @"28";
-        }
-        else if (self.count > 10) {
+        else if (self.count >= 10) {
             suffix = @"25";
         }
-        else if (self.count > 5) {
-            suffix = @"24";
-        }
         else {
-            suffix = @"21";
+            suffix = @"23";
         }
         
-        NSString *imageName = [NSString stringWithFormat:@"%@%@", self.isFollowed ? @"CircleBlue" : @"CircleRed", suffix];
+        NSString *imageName = [NSString stringWithFormat:@"%@%@", self.isFollowed ? @"followed" : @"unfollowed", suffix];
         image = [UIImage imageNamed:imageName];
 
         centerOffset = CGPointZero;

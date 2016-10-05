@@ -19,9 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="23y-0W-EBr"/>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2g-nK-g3G">
-                                <frame key="frameInset" minX="265" minY="28" width="100" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2g-nK-g3G">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FBR-r0-BkC"/>
+                                    <constraint firstAttribute="width" constant="100" id="dNc-7f-BmG"/>
+                                </constraints>
                                 <state key="normal" title="RELOAD"/>
                                 <connections>
                                     <action selector="onReloadAtCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5UG-H6-b0g"/>
@@ -31,9 +33,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="23y-0W-EBr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="35V-t4-HWJ"/>
+                            <constraint firstItem="o2g-nK-g3G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="6Cs-Ji-rwe"/>
                             <constraint firstItem="23y-0W-EBr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ehc-Se-dlz"/>
                             <constraint firstAttribute="trailing" secondItem="23y-0W-EBr" secondAttribute="trailing" id="MZw-du-3lk"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="23y-0W-EBr" secondAttribute="bottom" id="N9k-eG-Hrd"/>
+                            <constraint firstAttribute="trailing" secondItem="o2g-nK-g3G" secondAttribute="trailing" constant="10" id="WTW-Kv-RkV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3na-EU-2hd"/>
