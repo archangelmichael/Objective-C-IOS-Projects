@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Onboarding Pages View Controller-->
+        <scene sceneID="ckQ-84-MHm">
+            <objects>
+                <pageViewController storyboardIdentifier="OnboardingPagesVC" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="eBw-Lg-laI" customClass="OnboardingPagesViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dwi-Bi-8kf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="-250"/>
+        </scene>
+        <!--Onboarding Content View Controller-->
+        <scene sceneID="jv2-QP-5MU">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingContentVC" id="UWo-zG-FBt" customClass="OnboardingContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZhQ-5d-xFW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fie-uM-57k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fqs-tn-Vjb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X40-Rg-VzS"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqh-0Q-q39">
+                                <connections>
+                                    <action selector="onNext:" destination="UWo-zG-FBt" eventType="touchUpInside" id="bSz-GY-KXi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fie-uM-57k" firstAttribute="top" secondItem="rqh-0Q-q39" secondAttribute="bottom" id="5eA-SP-YIv"/>
+                            <constraint firstItem="X40-Rg-VzS" firstAttribute="leading" secondItem="fqs-tn-Vjb" secondAttribute="leading" id="6lI-jb-nwx"/>
+                            <constraint firstItem="rqh-0Q-q39" firstAttribute="leading" secondItem="fqs-tn-Vjb" secondAttribute="leading" id="7YL-ld-KxE"/>
+                            <constraint firstAttribute="trailing" secondItem="rqh-0Q-q39" secondAttribute="trailing" id="AO0-cO-u8K"/>
+                            <constraint firstAttribute="trailing" secondItem="X40-Rg-VzS" secondAttribute="trailing" id="eR1-4a-KU9"/>
+                            <constraint firstItem="rqh-0Q-q39" firstAttribute="height" secondItem="fqs-tn-Vjb" secondAttribute="height" multiplier="0.15" id="ped-v3-zJU"/>
+                            <constraint firstItem="X40-Rg-VzS" firstAttribute="top" secondItem="fqs-tn-Vjb" secondAttribute="top" id="rYk-DV-dfw"/>
+                            <constraint firstItem="Fie-uM-57k" firstAttribute="top" secondItem="X40-Rg-VzS" secondAttribute="bottom" id="uR3-E1-KfX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnNext" destination="rqh-0Q-q39" id="s39-sF-mFt"/>
+                        <outlet property="ivScreen" destination="X40-Rg-VzS" id="bfr-7u-euN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjM-F3-Np6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.875" y="518.66197183098598"/>
+        </scene>
+    </scenes>
+</document>
