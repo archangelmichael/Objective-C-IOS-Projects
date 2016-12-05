@@ -1,0 +1,10 @@
+platform :ios, '8.2'
+# Uncomment this line if you're using Swift
+use_frameworks!
+
+target 'LabelWithLinks' do
+
+pod 'TTTAttributedLabel'
+
+end
+
